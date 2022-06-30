@@ -53,18 +53,13 @@ export default {
   data() {
     return {}
   },
+  // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
-    console.log('Hi from the backend')
-    //
-    const { data } = await $axios.get('http://localhost:3010/api/events')
+    // const { data } = await $axios.get('http://localhost:3000/api/events')
+    const { data } = await $axios.get('/api/events')
     return {
       eventList: data,
     }
-  },
-  async mounted() {
-    console.log(this.$store.state.counter)
-    const { data } = await this.$axios.get('http://localhost:3010/api/events')
-    this.eventList = data
   },
 }
 </script>

@@ -1,5 +1,5 @@
 export default async (models) => {
-    const catList = [
+    const eventList = [
         {
             title: "Puro Latino1",
             title2: "Festival",
@@ -12,7 +12,7 @@ export default async (models) => {
             ticketWeb: "https://purolatino.es/sevilla/entradas/"
         },
         {
-            title: "Puro Latino1",
+            title: "Puro Latino2",
             title2: "Festival",
             photo: "https://purolatino.es/sevilla/wp-content/themes/yootheme/cache/f31ed0ea-9a0a-4aed-8cec-c51e2aa12c9e-71c7821e.jpeg",
             prize: "79€",
@@ -23,7 +23,7 @@ export default async (models) => {
             ticketWeb: "https://purolatino.es/sevilla/entradas/"
         },
         {
-            title: "Puro Latino1",
+            title: "Puro Latino3",
             title2: "Festival",
             photo: "https://purolatino.es/sevilla/wp-content/themes/yootheme/cache/f31ed0ea-9a0a-4aed-8cec-c51e2aa12c9e-71c7821e.jpeg",
             prize: "79€",
@@ -34,5 +34,5 @@ export default async (models) => {
             ticketWeb: "https://purolatino.es/sevilla/entradas/"
         },
     ]
-    await models.Cat.bulkCreate(catList)
+    await models.Event.bulkCreate(eventList)
 }

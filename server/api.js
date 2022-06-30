@@ -12,10 +12,15 @@ const database = new Sequelize("postgres://postgres:postgres@localhost:5432/sevi
 async function initializeDatabaseConnection() {
     await database.authenticate()
     const Event = database.define("event", {
-        name: DataTypes.STRING,
-        description: DataTypes.STRING,
-        breed: DataTypes.STRING,
-        img: DataTypes.STRING,
+        title: DataTypes.STRING, 
+        title2: DataTypes.STRING, 
+        photo: DataTypes.STRING, 
+        eventWeb: DataTypes.STRING, 
+        ticketWeb: DataTypes.STRING, 
+        prize: DataTypes.STRING, 
+        date: DataTypes.STRING, 
+        locationName: DataTypes.STRING, 
+        locationURL: DataTypes.STRING,
     })
     await database.sync({ force: true })
     return {
@@ -40,9 +45,15 @@ async function runMainApi() {
         const filtered = []
         for (const element of result) {
             filtered.push({
-                name: element.name,
-                img: element.img,
-                breed: element.breed,
+                title: element.title,
+                title2: element.title2,
+                photo: element.photo,
+                prize: element.prize,
+                locationName: element.locationName,
+                locationURL: element.locationURL,
+                date: element.date,
+                eventWeb: element.eventWeb,
+                ticketWeb: element.ticketWeb,
                 id: element.id,
             })
         }
