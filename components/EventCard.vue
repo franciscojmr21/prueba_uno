@@ -1,7 +1,7 @@
 <template>
 
     <!-- single Event -->
-          <div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
+          <div class="col-10 mx-auto my-3 col-md-6 col-lg-4" style="max-width: 380px;">
             <div class="card event-card">
               <a :href="eventWeb" target="_blank" rel="noopener noreferrer">
               <img :src="photo" class="card-img-top car-img" alt="" style="max-height: 400px;">
@@ -76,15 +76,6 @@ export default {
       required: true,
     }
         },
-        methods:{
-            imgPost(){
-                return this.photo;
-            },
-            url(url){
-                console.log(this.locationURL)
-              return url;
-            }
-        }
 }
 </script>
 

@@ -1,3 +1,5 @@
+
+
 export default async (models) => {
     const eventList = [
         {
@@ -35,4 +37,22 @@ export default async (models) => {
         },
     ]
     await models.Event.bulkCreate(eventList)
+
+    const serviceList = [ 
+        {
+            title1: "Day",
+            title2: "1",
+           
+        },
+        {
+            title1: "Day",
+            title2: "2",
+        },
+        {
+            title1: "Day",
+            title2: "3",
+        },
+    ]
+    await models.Service.bulkCreate(serviceList)
+
 }

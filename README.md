@@ -1,4 +1,4 @@
-# sevilla
+# Final Project template
 
 ## Build Setup
 
