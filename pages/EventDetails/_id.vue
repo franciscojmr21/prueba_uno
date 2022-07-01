@@ -13,12 +13,6 @@
                 :eventWeb="eventWeb"
                 :ticketWeb="ticketWeb"
           />
-          
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        ¡Esto cada vez pinta mejor! Y es que Puro Latino Sevilla Fest anuncia hoy una ampliación de fechas, incluyendo el jueves 30 de junio dentro de su suculenta propuesta. Día en el que podremos disfrutar, dentro de la programación de la cita hispalense, de la actuación de la estrella internacional Ozuna. Además, ya puedes adquirir tus entradas por jornadas para tan esperada cita, que va camino del sold out, toda vez que ya se han vendido más del 80% de todas las modalidades de abonos del festival ¡hazte ya con el tuyo y no te quedes fuera!
-
-Te esperamos desde el jueves 30 de junio y hasta el sábado 2 de julio en el Estadio La Cartuja de Sevilla para vibrar juntos al son de nombres tan irresistibles como Jhay Cortez, Myke Towers, Justin Quiles, Ñengo Flow, El Alfa, Eladio Carrión, Juan Magán, RVFV, Tokischa, Omar Montes, Bizarrap, Blessd, Ptazeta, Lérica, Beny Jr, Sech, Nio García, Morad ¡y más sorpresas que quedan aún por anunciar! ¿Qué nos dices? Te vienes?
-      </div>
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
