@@ -39,11 +39,17 @@ async function initializeDatabaseConnection() {
         title1: DataTypes.STRING, 
         title2: DataTypes.STRING, 
     })
+    const PointsOfInterest = database.define("pointsOfInterest", {
+        title: DataTypes.STRING, 
+        photo: DataTypes.STRING, 
+    })
+
     await database.sync({ force: true })
     return {
         Event,
         Service,
-        Itinerary
+        Itinerary,
+        PointsOfInterest
     }
 }
 
@@ -146,6 +152,19 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    })
+
+    app.get("/pointsOfInterest", async (req, res) => {
+        const result = await models.pointsOfInterest.findAll()
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title: element.title,
+                photo: element.photo,
                 id: element.id,
             })
         }

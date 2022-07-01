@@ -60,7 +60,6 @@ export default async (models) => {
         {
             title1: "Day",
             title2: "1",
-           
         },
         {
             title1: "Day",
@@ -72,5 +71,24 @@ export default async (models) => {
         },
     ]
     await models.Itinerary.bulkCreate(itineraryList)
+
+    const pointsOfInterestList = [
+        {
+            title: "Giralda",
+            photo: "https://purolatino.es/sevilla/wp-content/themes/yootheme/cache/f31ed0ea-9a0a-4aed-8cec-c51e2aa12c9e-71c7821e.jpeg",
+        },
+        {
+            title: "Catedral",
+            photo: "https://purolatino.es/sevilla/wp-content/themes/yootheme/cache/f31ed0ea-9a0a-4aed-8cec-c51e2aa12c9e-71c7821e.jpeg",
+           
+        },
+        {
+            title: "Torre del Oro",
+            photo: "https://purolatino.es/sevilla/wp-content/themes/yootheme/cache/f31ed0ea-9a0a-4aed-8cec-c51e2aa12c9e-71c7821e.jpeg",
+            
+        },
+    ]
+
+    await models.PointsOfInterest.bulkCreate(pointsOfInterestList)
 
 }

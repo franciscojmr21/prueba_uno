@@ -34,39 +34,7 @@
         </div>
       </div>
     </nav>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <a :to="pageHome" class="navbar-brand">
-        <img src="https://i.pinimg.com/236x/54/af/2b/54af2b7d1c96a9a659630d5e133b5009.jpg" style="max-width: 70px; max-height: 70px;" alt="logo">
-      </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarToggler"
-      aria-controls="navbarToggler"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="navbarToggler" class="collapse navbar-collapse" >
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li
-          v-for="(navItem, navItemIndex) of headerList"
-          :key="`navItem${navItemIndex}`"
-          class="nav-item"
-        >
-          <nuxt-link :to="navItem.path" class="nav-link">
-            {{ navItem.name }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
 </template>
-
-
 
 <script>
 export default {
@@ -75,12 +43,16 @@ export default {
     return {
       headerList: [
         {
+          name: 'HOME',
+          path: '/',
+        },
+        {
           name: 'ABOUT US',
           path: '/about',
         },
         {
           name: 'POINTS OF INTEREST',
-          path: '/pointsOfInterestList',
+          path: '/pointsOfInterest',
         },
         {
           name: 'EVENTS',
