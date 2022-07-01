@@ -55,4 +55,22 @@ export default async (models) => {
     ]
     await models.Service.bulkCreate(serviceList)
 
+
+    const itineraryList = [ 
+        {
+            title1: "Day",
+            title2: "1",
+           
+        },
+        {
+            title1: "Day",
+            title2: "2",
+        },
+        {
+            title1: "Day",
+            title2: "3",
+        },
+    ]
+    await models.Itinerary.bulkCreate(itineraryList)
+
 }

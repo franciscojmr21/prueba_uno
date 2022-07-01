@@ -29,17 +29,23 @@
         </div>
       <div class="row my-3">
         <!-- col -->
-         <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary>
+         <itinerary-card 
+                v-for="(itinerary, itineraryIndex) of itineraryList"
+                :key="`itinerary-index-${itineraryIndex}`"
+                :id="itinerary.id"
+                :title1="itinerary.title1"
+                :title2="itinerary.title2"
+              />
         <!-- end col -->
         <!-- col -->
-        <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary>
+        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
         <!-- end col -->
         <!-- col -->
-        <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary>
+        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
         <!-- end col -->
         <!-- end col -->
         <!-- col -->
-        <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary>
+        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
         <!-- end col -->
       </div>
     </div>
@@ -50,18 +56,18 @@
 </template>
 
 <script>
-import ServiceCard from '~/components/ServiceCard.vue'
+import ItineraryCard from '~/components/ItineraryCard.vue'
 export default {
-  name: 'ServiceList',
+  name: 'ItineraryList',
   components: {
-    ServiceCard,
+    ItineraryCard,
   },
   // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('/api/services')
+    const { data } = await $axios.get('/api/itineraries')
     return {
-      serviceList: data,
+      itineraryList: data,
     }
   },
 }

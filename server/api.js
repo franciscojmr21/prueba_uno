@@ -35,10 +35,15 @@ async function initializeDatabaseConnection() {
         title1: DataTypes.STRING, 
         title2: DataTypes.STRING, 
     })
+    const Itinerary = database.define("itinerary", {
+        title1: DataTypes.STRING, 
+        title2: DataTypes.STRING, 
+    })
     await database.sync({ force: true })
     return {
         Event,
-        Service
+        Service,
+        Itinerary
     }
 }
 
@@ -134,6 +139,19 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
+    app.get("/itineraries", async (req, res) => {
+        const result = await models.Itinerary.findAll()
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    })
+
     // HTTP POST api, that will push (and therefore create) a new element in
     // our actual database
     app.post("/events", async (req, res) => {
@@ -145,6 +163,12 @@ async function runMainApi() {
     app.post("/services", async (req, res) => {
         const { body } = req
         await models.Service.create(body);
+        return res.sendStatus(200)
+    })
+
+    app.post("/itineraries", async (req, res) => {
+        const { body } = req
+        await models.Itinerary.create(body);
         return res.sendStatus(200)
     })
 
