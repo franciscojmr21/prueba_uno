@@ -4,7 +4,7 @@
     <!-- single Point Of Interest -->
 
           <!-- first item -->
-    <div class="col-sm-6">
+    <div class="col-sm-6" >
             <div class="pointOfInterest-item">
               <marco>
               <img :src=imgPost() class="card-img-top car-img" alt="">

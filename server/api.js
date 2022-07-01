@@ -159,7 +159,7 @@ async function runMainApi() {
     })
 
     app.get("/pointsOfInterest", async (req, res) => {
-        const result = await models.pointsOfInterest.findAll()
+        const result = await models.PointsOfInterest.findAll()
         const filtered = []
         for (const element of result) {
             filtered.push({

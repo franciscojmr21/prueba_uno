@@ -17,11 +17,12 @@
             </div>
           </div>
           <div class="row">
+            <!-- dividir en tipos de servicio -->
               <service-card 
                 v-for="(service, serviceIndex) of serviceList"
                 :key="`service-index-${serviceIndex}`"
                 :id="service.id"
-                :title="service.title"
+                :title1="service.title1"
                 :title2="service.title2"
               />
           </div>
