@@ -88,6 +88,12 @@ async function runMainApi() {
         return res.json(result)
     })
 
+    app.get('/events/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.Event.findOne({ where: { id }})
+        return res.json(result)
+    })
+
     // HTTP GET api that returns all the cats in our actual database
     app.get("/cats", async (req, res) => {
         const result = await models.Cat.findAll()

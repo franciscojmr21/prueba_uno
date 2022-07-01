@@ -12,7 +12,7 @@
             <div class="col d-flex flex-wrap text-uppercase justify-content-center">
               <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
               <!-- <a href="Events.html#setas"> -->
-              <h1 class="section-title--special mx-1">events</h1>
+              <h1 class="section-title--special mx-1">Prueba Events</h1>
             <!-- </a> -->
             </div>
           </div>
@@ -39,16 +39,18 @@
 <script>
 import EventCard from '~/components/EventCardList.vue'
 export default {
-  name: 'IndexPage',
+  name: 'pruebaEvent',
   components: {
     EventCard,
   },
   // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('/api/events')
+    const { event1 } = await $axios.get('/api/events/1')
+    const { event2 } = await $axios.get('/api/events/2')
+    const { event3 } = await $axios.get('/api/events/3')
     return {
-      eventList: data,
+      eventList: [event1, event2, event3],
     }
   },
 }

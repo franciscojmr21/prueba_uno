@@ -1,33 +1,34 @@
 <template>
 
     <!-- single Event -->
-          <div class="col-10 mx-auto my-3 col-md-6 col-lg-4" style="max-width: 380px;">
-            <div class="card event-card">
+          <div  class="col-10 mx-auto my-3 col-md-6 col-lg-4" style="max-width: 380px;">
+            <div class="card event-card" >
               <a :href="eventWeb" target="_blank" rel="noopener noreferrer">
-              <img :src="photo" class="card-img-top car-img" alt="" style="max-height: 400px;">
+              <img :src="photo" class="card-img-top car-img" alt="" style="height: 400px;">
               </a>
               <!-- card body -->
               <div class="card-body">
                 <div class="event-info d-flex justify-content-between">
                   <!-- first flex child -->
                   <div class="event-text text-uppercase">
-                    <h6 class="font-weight-bold">{{this.title}}</h6>
-                    <h6>{{this.title2}}</h6> 
+                    <h6 class="font-weight-bold">{{title}}</h6>
+                    <i style="color: grey;"><span></span>{{date}}</i> 
                   </div>
                   <!-- second flex child -->
                   <a :href="ticketWeb" target="_blank" rel="noopener noreferrer">
 
                   <h5 class="event-value align-self-center py-2 px-3">
-                    <span class="event-price">{{this.prize}}</span>
+                    <span class="event-price">{{prize}}</span>
                   </h5>
                   
                 </a>
                 </div>
               </div>
               <!-- end of card -->
-              <div class="card-footer text-capitalize d-flex justify-content-between" >
-                <p><span></span>{{date}}</p>
-                <a :href="locationURL" target="_blank" rel="noopener noreferrer"><span></span>{{this.locationName}}<img src="https://cdn-icons-png.flaticon.com/128/2642/2642502.png" style="max-width: 20px; max-height: 20px;"></a>
+              <div class="card-footer text-capitalize d-flex justify-content-center" >
+                <nuxt-link :to="`/EventDetails/${id}`">
+                  <div class="btn btn-primary btn-orange">See Details</div>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -37,45 +38,42 @@
 <script >
 
 export default {
-  name:"EventCard",
+  name:"EventCardList",
     props: {
-        title: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      required: true,
+    },
+    photo: {
+      type: String,
+      required: true,
+    },
+    eventWeb: {
+      type: String,
+      required: true,
+    },
+    ticketWeb: {
       type: String,
       required: true,
     }, 
-        title2: {
-      type: String,
-      required: true,
-    },
-        photo: {
-      type: String,
-      required: true,
-    },
-        eventWeb: {
-      type: String,
-      required: true,
-    },
-        ticketWeb: {
+    prize: {
       type: String,
       required: true,
     }, 
-        prize: {
-      type: String,
-      required: true,
-    }, 
-        date: {
-      type: String,
-      required: true,
+  },
+  methods: {
+    goToDetails() {
+      this.$router.push(`/EventDetails/${this.id}`)
     },
-        locationName: {
-      type: String,
-      required: true,
-    },
-        locationURL: {
-      type: String,
-      required: true,
-    }
-        },
+  },
 }
 </script>
 
@@ -111,5 +109,16 @@ export default {
 .event-value:hover{
   clip-path: polygon(0% 0,100% 0,100% 100%,0 100%);
 }  
+.btn{
+  text-transorm: uppercase;
+  color: var(--mainWhite);
+  border-color: var(--mainBlack);
+  background-color: var(--transparentOrange);
+  text-shadow: black 0.2em 0.2em 0.5em;
+}
+.btn:hover{
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
 
 </style>
