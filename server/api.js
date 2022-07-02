@@ -94,6 +94,26 @@ async function runMainApi() {
         return res.json(result)
     })
 
+    // app.get('/services/:id', async (req, res) => {
+    //     const id = +req.params.id
+    //     const result = await models.Service.findOne({ where: { id }})
+    //     return res.json(result)
+    // })
+
+    app.get('/services/:id', async (req, res) => {
+        const title2 = "Hospital"
+        const result = await models.Service.findAll({ where: { title2 }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    })
+
     // HTTP GET api that returns all the cats in our actual database
     app.get("/cats", async (req, res) => {
         const result = await models.Cat.findAll()
@@ -149,6 +169,20 @@ async function runMainApi() {
             })
         }
         return res.json(filtered)
+    })
+
+
+    // app.get("/services/:title2", async (req, res) => {
+    //     // const result = await models.Service.findAll()
+    //     const title2 = req.Service.params
+    //     const result = await models.Service.findOne ({ where: {title2}});
+    //     return res.json(result)
+    // })
+
+    app.get('/services/Hospital', async (req, res) => {
+        const title2 = +req.params.title2
+        const result = await models.Event.findOne({ where: { title2 }})
+        return res.json(result)
     })
 
     app.get("/itineraries", async (req, res) => {

@@ -122,8 +122,8 @@ export default async (models) => {
            
         },
         {
-            title1: "Virgen del Rocio",
-            title2: "University Hospital",
+            title1: "Virgen del Rocio University",
+            title2: "Hospital",
         },
         {
             title1: "Maria Eugennia Cruz Roja Sevilla",
@@ -142,8 +142,8 @@ export default async (models) => {
             title2: "Pharmacy",
         },
         {
-            title1: "Bank of",
-            title2: "Spain",
+            title1: "Spanish",
+            title2: "Bank",
         },
         {
             title1: "Eurostars Tower",

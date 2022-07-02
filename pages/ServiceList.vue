@@ -25,6 +25,7 @@
                 :title1="service.title1"
                 :title2="service.title2"
               />
+           
           </div>
         </div>
       </section>

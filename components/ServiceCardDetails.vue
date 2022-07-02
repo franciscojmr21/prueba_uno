@@ -3,9 +3,6 @@
   <div class="services-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
             <h5 class="font-weight-bold mx-1">{{title1}}</h5>
             <h5 class="mx-1">{{title2}}</h5>
-            <nuxt-link :to="`/ServiceDetails/${id}`">
-                  <div class="btn btn-primary btn-orange">See Details</div>
-                </nuxt-link>
           </div>
 
 </template>
@@ -13,7 +10,7 @@
 
 <script >
 export default {
-  name:"ServiceCard",
+  name:"ServiceCardDetails",
    props: {
     id: {
       type: Number,

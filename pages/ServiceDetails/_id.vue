@@ -1,18 +1,13 @@
 <template>
   <div class="container my-5" style="background-color: white;">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
-        <event-card 
-                :id="id"
-                :title="title"
-                :title2="title2"
-                :photo="photo"
-                :prize="prize"
-                :locationName="locationName"
-                :locationURL="locationURL"
-                :date="date"
-                :eventWeb="eventWeb"
-                :ticketWeb="ticketWeb"
-          />
+        <service-card-details 
+                v-for="(service, serviceIndex) of serviceList"
+                :key="`service-index-${serviceIndex}`"
+                :id="service.id"
+                :title1="service.title1"
+                :title2="service.title2"
+              />
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
@@ -25,27 +20,17 @@
 </template>
 
 <script>
-import CommonMixin from '~/mixins/common'
-import EventCard from '~/components/EventCardDetails.vue'
+import ServiceCardDetails from '~/components/ServiceCardDetails.vue'
 export default {
-  name: 'EventDetails',
+  name: 'ServiceDetails',
   components: {
-    EventCard,
+    ServiceCardDetails,
   },
-  mixins: [CommonMixin],
-  async asyncData({ route, $axios }) {
-    const { id } = route.params
-    const { data } = await $axios.get('/api/events/' + id)
+  async asyncData({ $axios }) {
+    // const { data } = await $axios.get('http://localhost:3000/api/cats')
+    const { data } = await $axios.get('/api/services/1')
     return {
-      title: data.title,
-      title2: data.title2,
-      photo: data.photo,
-      eventWeb: data.eventWeb,
-      ticketWeb: data.ticketWeb,
-      prize: data.prize,
-      date: data.date,
-      locationName: data.locationName,
-      locationURL: data.locationURL
+      serviceList: data,
     }
   },
   head(){
@@ -53,14 +38,14 @@ export default {
       title: this.title
     }
   },
-  mounted(){
-    const date = new Date()
-    // Example on hwo to use mixinx
-    console.log(this.formatMyDate(date.toLocaleDateString()))
-  },
+//   mounted(){
+//     const date = new Date()
+//     // Example on hwo to use mixinx
+//     console.log(this.formatMyDate(date.toLocaleDateString()))
+//   },
   methods: {
     backToList() {
-      this.$router.push('/EventList')
+      this.$router.push('/ServiceList')
     },
   },
 }
