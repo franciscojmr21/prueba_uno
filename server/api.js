@@ -158,6 +158,37 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
+    app.get("/allHomePage", async (req, res) => {
+        const result = await models.Event.findAll({where: { id:[1,2,3] }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title: element.title,
+                title2: element.title2,
+                photo: element.photo,
+                prize: element.prize,
+                locationName: element.locationName,
+                locationURL: element.locationURL,
+                date: element.date,
+                eventWeb: element.eventWeb,
+                ticketWeb: element.ticketWeb,
+                id: element.id,
+            })
+        }
+            
+            const result2 = await models.Service.findAll({where: { id:[1,2,3,4,5] }})
+            for (const element of result2) {
+                filtered.push({
+                    title1: element.title1,
+                    title2: element.title2,
+                    id: element.id,
+                })
+            }
+        
+
+        return res.json(filtered)
+    })
+
     app.get("/services", async (req, res) => {
         const result = await models.Service.findAll()
         const filtered = []

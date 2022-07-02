@@ -13,23 +13,245 @@
   
         </div>
       </div>
-    <canvas width="700" height="627" style="position: absolute; inset: 0px; z-index: -1;"></canvas></header>
+    <canvas width="700" height="627" style="position: absolute; inset: 0px; z-index: -1;"></canvas>
+    <section class="event py-5" id="events">
+        <div class="container">
+          <!-- section title -->
+          <div class="row mb-5">
+            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+              <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
+              <!-- <a href="Events.html#setas"> -->
+              <h1 class="section-title--special mx-1">events</h1>
+            <!-- </a> -->
+            </div>
+          </div>
+          <div class="row">
+            <event-card-list 
+                :id=getId(allList,0)
+                :title=getTitle(allList,0)
+                :title2=getTitle2(allList,0)
+                :photo=getPhoto(allList,0)
+                :prize=getPrize(allList,0)
+                :locationName=getLocationName(allList,0)
+                :locationURL=getLocationURL(allList,0)
+                :date=getDate(allList,0)
+                :eventWeb=getEventWeb(allList,0)
+                :ticketWeb=getTicketWeb(allList,0)
+              />
+              <event-card-list 
+                :id=getId(allList,1)
+                :title=getTitle(allList,1)
+                :title2=getTitle2(allList,1)
+                :photo=getPhoto(allList,1)
+                :prize=getPrize(allList,1)
+                :locationName=getLocationName(allList,1)
+                :locationURL=getLocationURL(allList,1)
+                :date=getDate(allList,1)
+                :eventWeb=getEventWeb(allList,1)
+                :ticketWeb=getTicketWeb(allList,1)
+              />
+              <event-card-list 
+                :id=getId(allList,2)
+                :title=getTitle(allList,2)
+                :title2=getTitle2(allList,2)
+                :photo=getPhoto(allList,2)
+                :prize=getPrize(allList,2)
+                :locationName=getLocationName(allList,2)
+                :locationURL=getLocationURL(allList,2)
+                :date=getDate(allList,2)
+                :eventWeb=getEventWeb(allList,2)
+                :ticketWeb=getTicketWeb(allList,2)
+              />
+          </div>
+        </div>
+        <section class="contact " id="show_events">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 mx-auto col-md-6">
+              <nuxt-link :to="`/EventList/`">
+                <button type="submit" class="btn btn-outline-secondary btn-block show_more-btn">SHOW MORE</button>
+              </nuxt-link>
+            </div>
+          </div>
+        </div>
+      </section>
+      </section>
+
+      <section class="section question py-5">
+        <div class="section question py-5" id="question">
+          <div class="container">
+            <div class="row">
+              <!-- single question first-->
+              <a href="https://www.google.com/search?q=Most+Popular+Restaurants&amp;rlz=1C1CHBF_esES949ES949&amp;oq=Most+Popular+Restaurants&amp;aqs=chrome..69i57j0i512j0i22i30l8.641j0j9&amp;sourceid=chrome&amp;ie=UTF-8" target="_blank" rel="noopener noreferrer" class="question-icon mr-3">
+
+              <div class="col-10 mx-auto my-2 col-md-6 d-flex justify-content-between question-grey p-4">
+                <!-- first flexbox child -->
+                  <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" style="max-width: 50px; max-height: 50px;"/>
+                <!-- second flexbox child -->
+                <div class="question-text w-75">
+                  <h4 class="question-title text-capitalize font-weight-bold">
+                        Most Popular Restaurants
+                  </h4>
+                  <!-- <p class="question-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, quis!</p> -->
+                </div>
+              
+              </div>
+              </a>
+
+              <!-- single question second-->
+              <a href="https://www.google.com/search?q=Cheapest+Restaurants+sevilla&amp;rlz=1C1CHBF_esES949ES949&amp;oq=Cheapest+Restaurants+&amp;aqs=chrome.0.69i59j69i57j0i457i512j0i22i30l6j0i10i22i30.1911j0j7&amp;sourceid=chrome&amp;ie=UTF-8" target="_blank" rel="noopener noreferrer" class="question-icon mr-3">
+
+              <div class="col-10 mx-auto my-2 col-md-6 d-flex justify-content-between question-yellow p-4">
+                <!-- first flexbox child -->
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25228.png" style="max-width: 50px; max-height: 50px;"/>
+                <!-- second flexbox child -->
+                <div class="question-text w-75">
+                  <h4 class="question-title text-capitalize font-weight-bold">
+                    Cheapest Restaurants
+                  </h4>
+
+                  <!-- <p class="question-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, quis!</p> -->
+                </div>
+                
+              </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="services py-5" id="service_types">
+        <div class="container">
+          <!-- section title -->
+          <div class="row mb-5">
+            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+                <h1 class="section-title--special mx-1">Services</h1>
+            </div>
+          </div>
+          <!-- end of section title -->
+
+          <div class="row">
+            <div class="col-10 mx-auto col-lg-6 services-info my-3">
+              <service-card
+                    :id=getId(allList,3)
+                    :title1=getTitle1(allList,3)
+                    :title2=getTitle2(allList,3)
+                    />
+              <service-card
+                    :id=getId(allList,4)
+                    :title1=getTitle1(allList,4)
+                    :title2=getTitle2(allList,4)
+                    />
+              <service-card
+                    :id=getId(allList,5)
+                    :title1=getTitle1(allList,5)
+                    :title2=getTitle2(allList,5)
+                    />
+              <service-card
+                    :id=getId(allList,6)
+                    :title1=getTitle1(allList,6)
+                    :title2=getTitle2(allList,6)
+                    />
+              <service-card
+                    :id=getId(allList,7)
+                    :title1=getTitle1(allList,7)
+                    :title2=getTitle2(allList,7)
+                    />
+
+            </div>
+          </div>
+          <!-- services img -->
+          <div class="col-10 mx-auto col-lg-6 services-img align-self-center my-3">
+            <!-- img container -->
+            <nuxt-link :to="`/ServiceList/`" class="img-container">
+              <img src="https://www.diariodesevilla.es/2021/02/25/sociedad/Torre-Oro-monumentos-emblematicos-Sevilla_1550555021_134722316_1200x675.jpg" alt="" class="img-fluid services-photo">
+            </nuxt-link>
+          </div>
+        </div>
+          <section class="show_more" id="show_services">
+            <div class="container">
+              <div class="row">
+                <div class="col-8 mx-auto col-md-6">
+                  <nuxt-link :to="`/ServiceList/`">
+                    <button type="submit" class="btn btn-outline-secondary btn-block show_more-btn">SHOW MORE</button>
+                  </nuxt-link>
+                </div>
+              </div>
+            </div>
+          </section>
+    </section>
+  </header>
 </template>
 
 <script>
+import ServiceCard from '~/components/ServiceCard.vue'
+import EventCardList from '~/components/EventCardList.vue'
 export default {
   name: 'IndexPage',
+  components: {
+    ServiceCard,
+    EventCardList
+  },
   async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
-    const title = data.title
-    const image = data.image
-    const description = data.description
+    const {data} = await $axios.get('/api/allHomePage')
     return {
-      title,
-      description,
-      image,
+      allList: data, 
     }
   },
+  methods:{
+    getId(list, i){
+      const id = list[i].id;
+      console.log("id: "+id)
+      return list[i].id;
+    },
+    getTitle1(list, i){
+      const id = list[i].title1;
+      console.log("title1: "+id)
+      return list[i].title1;
+    },
+    getTitle2(list, i){
+      const id = list[i].title2;
+      console.log("title2: "+id)
+      return list[i].title2;
+    },
+    getTitle(list, i){
+      const id = list[i].title;
+      console.log("title: "+id)
+      return list[i].title;
+    },
+    getPrize(list, i){
+      const id = list[i].prize;
+      console.log("prize: "+id)
+      return list[i].prize;
+    },
+    getDate(list, i){
+      const id = list[i].date;
+      console.log("date: "+id)
+      return list[i].date;
+    },
+    getPhoto(list, i){
+      const id = list[i].photo;
+      console.log("photo: "+id)
+      return list[i].photo;
+    },
+    getLocationName(list, i){
+      const id = list[i].locationName;
+      console.log("locationname: "+id)
+      return list[i].locationName;
+    },
+    getLocationURL(list, i){
+      const id = list[i].locationURL;
+      console.log("locationURL: "+id)
+      return list[i].locationURL;
+    },
+    getEventWeb(list, i){
+      return list[i].eventWeb;
+    },
+    getTicketWeb(list, i){
+      return list[i].ticketWeb;
+    },
+  }
 }
 </script>
 
@@ -175,5 +397,28 @@ html {
     transform: translateY(-10px);
 
   }
+}
+
+/* question */
+.question{
+  background: url("https://elviajerofeliz.com/wp-content/uploads/2019/11/Comida-t%C3%ADpica-de-India-_-10-Platos-Imprescindibles.jpg")center/cover fixed no-repeat;
+}
+.question-grey{
+  background: rgba(79,109,122,0.75);
+}
+.question-yellow{
+  background: rgba(227,181,5,0.75);
+}
+.question-icon{
+  font-size: 4rem;
+  color: var(--mainBlue);
+  transition: all 0.5s ease-in-out;
+}
+.question-icon:hover{
+transform: translateY(-10%);
+color: var(--mainBlue);
+}
+.question-info{
+  color:var(--mainWhite);
 }
 </style>
