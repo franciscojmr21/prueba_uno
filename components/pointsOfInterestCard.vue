@@ -4,10 +4,10 @@
     <!-- single Point Of Interest -->
 
           <!-- first item -->
-    <div class="col-sm-6" >
+    <div class="col-sm-6" style="padding: 10px;">
             <div class="pointOfInterest-item">
               <marco>
-              <img :src=imgPost() class="card-img-top car-img" alt="">
+              <img :src=imgPost() class="card-img-top car-img" style="width: 640px; height: 405px;">
               <img_text class="centrado">{{this.title}}</img_text>
             </marco>
             </div>
