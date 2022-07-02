@@ -30,6 +30,7 @@ async function initializeDatabaseConnection() {
         date: DataTypes.STRING, 
         locationName: DataTypes.STRING, 
         locationURL: DataTypes.STRING,
+        tipo: DataTypes.STRING, 
     })
     const Service = database.define("service", {
         title1: DataTypes.STRING, 
@@ -94,24 +95,10 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    // app.get('/services/:id', async (req, res) => {
-    //     const id = +req.params.id
-    //     const result = await models.Service.findOne({ where: { id }})
-    //     return res.json(result)
-    // })
-
     app.get('/services/:id', async (req, res) => {
-        const title2 = "Hospital"
-        const result = await models.Service.findAll({ where: { title2 }})
-        const filtered = []
-        for (const element of result) {
-            filtered.push({
-                title1: element.title1,
-                title2: element.title2,
-                id: element.id,
-            })
-        }
-        return res.json(filtered)
+        const id = +req.params.id
+        const result = await models.Service.findOne({ where: { id }})
+        return res.json(result)
     })
 
     // HTTP GET api that returns all the cats in our actual database
@@ -186,6 +173,80 @@ async function runMainApi() {
             }
         
 
+        return res.json(filtered)
+    })
+
+    app.get("/hospital", async (req, res) => {
+        
+        const title2 = "Hospital"
+        const result = await models.Service.findAll({ where: { title2 }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    })
+
+    app.get("/hotel", async (req, res) => {
+        
+        const title2 = "Hotel"
+        const result = await models.Service.findAll({ where: { title2 }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    }) 
+
+    app.get("/summer", async (req, res) => {
+        
+        const tipo= "summer"
+        const result = await models.Event.findAll({ where: { tipo }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title: element.title,
+                title2: element.title2,
+                photo: element.photo,
+                prize: element.prize,
+                locationName: element.locationName,
+                locationURL: element.locationURL,
+                date: element.date,
+                eventWeb: element.eventWeb,
+                ticketWeb: element.ticketWeb,
+                id: element.id,
+            })
+        }
+        return res.json(filtered)
+    })
+
+    app.get("/spring", async (req, res) => {
+        
+        const tipo= "spring"
+        const result = await models.Event.findAll({ where: { tipo }})
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                title: element.title,
+                title2: element.title2,
+                photo: element.photo,
+                prize: element.prize,
+                locationName: element.locationName,
+                locationURL: element.locationURL,
+                date: element.date,
+                eventWeb: element.eventWeb,
+                ticketWeb: element.ticketWeb,
+                id: element.id,
+            })
+        }
         return res.json(filtered)
     })
 

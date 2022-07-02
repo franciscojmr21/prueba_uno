@@ -1,12 +1,10 @@
 <template>
   <div class="container my-5" style="background-color: white;">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
-        <service-card-details 
-                v-for="(service, serviceIndex) of serviceList"
-                :key="`service-index-${serviceIndex}`"
-                :id="service.id"
-                :title1="service.title1"
-                :title2="service.title2"
+        <service-card 
+                :id="id"
+                :title1="title1"
+                :title2="title2"
               />
           <button
             type="button"
@@ -20,17 +18,20 @@
 </template>
 
 <script>
-import ServiceCardDetails from '~/components/ServiceCardDetails.vue'
+import CommonMixin from '~/mixins/common'
+import ServiceCard from '~/components/ServiceCard.vue'
 export default {
-  name: 'ServiceDetails',
+  name: 'Service',
   components: {
-    ServiceCardDetails,
+    ServiceCard,
   },
-  async asyncData({ $axios }) {
-    // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('/api/services/1')
+  mixins: [CommonMixin],
+  async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('/api/services/'+id)
     return {
-      serviceList: data,
+      title1: data.title1,
+      title2: data.title2
     }
   },
   head(){

@@ -11,7 +11,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/vHTorSTkSrrDK4wBA",
             date: "01/07/22 - 02/07/22",
             eventWeb: "https://purolatino.es/sevilla/",
-            ticketWeb: "https://purolatino.es/sevilla/entradas/"
+            ticketWeb: "https://purolatino.es/sevilla/entradas/",
+            tipo: "summer"
         },
         {
             title: "Semana Santa",
@@ -22,7 +23,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/htgB2xMuTrbaVJqc8",
             date: "10/04/22 - 16/04/22",
             eventWeb: "https://www.sevilla.org/fiestas-de-la-ciudad/semana-santa/",
-            ticketWeb: ""
+            ticketWeb: "",
+            tipo: "spring"
         },
         {
             title: "Feria de Sevilla",
@@ -33,7 +35,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/HyeFmoidtzKBtyEV8",
             date: "01/05/22 - 07/05/22",
             eventWeb: "https://www.sevilla.org/fiestas-de-la-ciudad/feria-de-sevilla",
-            ticketWeb: ""
+            ticketWeb: "",
+            tipo: "spring"
         },
         {
             title: "Setas de Sevilla",
@@ -44,7 +47,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/JfSqWCprwmrmWP2v9",
             date: "30/05/22 - 30/06/22",
             eventWeb: "https://checkoutentradas4.elcorteingles.es/public/janto/main.php?Nivel%3DmenuCalendario%26idEvento%3DFEELINGNOCHE",
-            ticketWeb: "https://www.elcorteingles.es/entradas/cultura/entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/?performance_url=entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/"
+            ticketWeb: "https://www.elcorteingles.es/entradas/cultura/entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/?performance_url=entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/",
+            tipo: ""
         },
         {
             title: "Malú Concert",
@@ -55,7 +59,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/JkMihQgyWdccRhSg6",
             date: "04/06/22 - 04/06/22",
             eventWeb: "https://www.entradas.com/event/malu-mil-batallas-auditorio-rocio-jurado-antigua-cartuja-14620138/",
-            ticketWeb: "https://www.entradas.com/event/malu-mil-batallas-auditorio-rocio-jurado-antigua-cartuja-14620138/"
+            ticketWeb: "https://www.entradas.com/event/malu-mil-batallas-auditorio-rocio-jurado-antigua-cartuja-14620138/",
+            tipo: "summer"
         },
         {
             title: "Seville Aquarium",
@@ -66,7 +71,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/fwrBqqU8QGnedspK9",
             date: "31/05/22 - 31/12/22",
             eventWeb: "https://www.acuariosevilla.es/",
-            ticketWeb: "https://entradas.acuariosevilla.es/TicketOffice/Index.aspx"
+            ticketWeb: "https://entradas.acuariosevilla.es/TicketOffice/Index.aspx",
+            tipo: ""
         },
         {
             title: "Game of Thrones Tour",
@@ -77,7 +83,8 @@ export default async (models) => {
             locationURL: "https://g.page/realalcazarsevilla?share",
             date: "10/04/22 - 31/12/22",
             eventWeb: "https://lasuperagenda.com/eventos/sevilla/exposiciones/tour-de-juego-de-tronos-por-el-alcazar-de-sevilla/",
-            ticketWeb: "https://www.civitatis.com/es/sevilla/tour-juego-tronos-alcazar?aid=8738"
+            ticketWeb: "https://www.civitatis.com/es/sevilla/tour-juego-tronos-alcazar?aid=8738",
+            tipo: ""
         },
         {
             title: "Cruise on Guadalquivir",
@@ -88,7 +95,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/28tP3a4uerzvyJf16",
             date: "01/05/22 - 31/12/22",
             eventWeb: "https://cutt.ly/IKNDjId",
-            ticketWeb: "https://cutt.ly/IKNDjId"
+            ticketWeb: "https://cutt.ly/IKNDjId",
+            tipo: ""
         },
         {
             title: "Flamenco",
@@ -99,7 +107,8 @@ export default async (models) => {
             locationURL: "https://g.page/tablaoalvarezquintero?share",
             date: "30/05/22 - 31/12/22",
             eventWeb: "https://www.tablaosevilla.es/",
-            ticketWeb: "https://www.tablaosevilla.es/"
+            ticketWeb: "https://www.tablaosevilla.es/",
+            tipo: ""
         },
         {
             title: "Legends of Triana Tour",
@@ -110,7 +119,8 @@ export default async (models) => {
             locationURL: "https://goo.gl/maps/jgPwfT5Avf5gNczg9",
             date: "01/07/22 - 31/12/22",
             eventWeb: "https://naturanda.com/tour-leyendas-de-triana/",
-            ticketWeb: "https://naturanda.com/tour-leyendas-de-triana/"
+            ticketWeb: "https://naturanda.com/tour-leyendas-de-triana/",
+            tipo: ""
         },
     ]
     await models.Event.bulkCreate(eventList)

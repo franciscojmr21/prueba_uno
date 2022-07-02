@@ -10,6 +10,29 @@
       </button>
       <div class="navbar-collapse collapse" id="myNav">
         <ul class="navbar-nav mx-auto">
+          <li><nuxt-link :to="`/`" class="nav-link text-capitalize">HOME</nuxt-link></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              EVENTS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><nuxt-link :to="`/EventSummer`" class="dropdown-item">Summer Events</nuxt-link></li>
+              <li><nuxt-link :to="`/EventSpring`" class="dropdown-item" >Spring Events</nuxt-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><nuxt-link :to="`/EventList`" class="dropdown-item">All Events</nuxt-link></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SERVICE TYPES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><nuxt-link :to="`/ServicesHospital`" class="dropdown-item">Hospital</nuxt-link></li>
+              <li><nuxt-link :to="`/ServicesHotel`" class="dropdown-item" >Hotel</nuxt-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><nuxt-link :to="`/ServiceList`" class="dropdown-item">All Services</nuxt-link></li>
+            </ul>
+          </li>
           <li 
             v-for="(navItem, navItemIndex) of headerList"
             :key="`navItem${navItemIndex}`"
@@ -29,29 +52,18 @@ export default {
   data() {
     return {
       headerList: [
-        {
-          name: 'HOME',
-          path: '/',
-        },
-        {
-          name: 'ABOUT US',
-          path: '/about',
-        },
+
         {
           name: 'POINTS OF INTEREST',
           path: '/pointsOfInterest',
-        },
-        {
-          name: 'EVENTS',
-          path: '/EventList',
         },
         {
           name: 'ITINERARIES',
           path: '/itinerariesList',
         },
         {
-          name: 'SERVICE TYPES',
-          path: '/ServiceList',
+          name: 'ABOUT US',
+          path: '/about',
         },
         {
           name: 'CONTACT US',
