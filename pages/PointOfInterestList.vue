@@ -12,12 +12,12 @@
             <div class="col d-flex flex-wrap text-uppercase justify-content-center">
               <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
               <!-- <a href="Events.html#setas"> -->
-              <h1 class="section-title--special mx-1">pointsOfInterest</h1>
+              <h1 class="section-title--special mx-1">points Of Interest</h1>
             <!-- </a> -->
             </div>
           </div>
           <div class="row">
-              <points-of-interest-card 
+              <point-of-interest-card 
                 v-for="(pointsOfInterest, pointsOfInterestIndex) of pointsOfInterestList"
                 :key="`pointsOfInterest-index-${pointsOfInterestIndex}`"
                 :id="pointsOfInterest.id"
@@ -33,11 +33,11 @@
 </template>
 
 <script>
-import pointsOfInterestCard from '~/components/pointsOfInterestCard.vue'
+import PointOfInterestCard from '~/components/PointOfInterestCard.vue'
 export default {
-  name: 'pointsOfInterest',
+  name: 'PointOfInterestList',
   components: {
-    pointsOfInterestCard,
+    PointOfInterestCard,
   },
   // Note: This happens on backend (server) side
   async asyncData({ $axios }) {

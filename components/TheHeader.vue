@@ -55,7 +55,7 @@ export default {
 
         {
           name: 'POINTS OF INTEREST',
-          path: '/pointsOfInterest',
+          path: '/PointOfInterestList',
         },
         {
           name: 'ITINERARIES',

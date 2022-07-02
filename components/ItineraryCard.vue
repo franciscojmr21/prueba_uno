@@ -5,7 +5,7 @@
 
           <!-- first item -->
  <!-- col -->
-        <div class="col-8 mx-auto col-lg-6 col-md-4 my-3">
+        <nuxt-link :to="`/ItineraryDetails/${id}`" class="col-8 mx-auto col-lg-6 col-md-4 my-3">
           <div class="itineary py-5 pl-4">
            <span class="itineary-icon">
               <i class="fas fa-cogs"></i>
@@ -15,7 +15,7 @@
             <h5 class="text-uppercase font-weight-bold">{{title2}}</h5>
             </div>
           </div>
-        </div>
+        </nuxt-link>
         <!-- end col -->
 </template>
 
@@ -25,6 +25,10 @@
 export default {
     name:"ItineraryCard",
     props: {
+       id: {
+      type: Number,
+      required: true,
+    }, 
        title1: {
       type: String,
       required: true,

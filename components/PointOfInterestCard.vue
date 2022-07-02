@@ -4,14 +4,14 @@
     <!-- single Point Of Interest -->
 
           <!-- first item -->
-    <div class="col-sm-6" style="padding: 10px;">
+    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
             <div class="pointOfInterest-item">
               <marco>
-              <img :src=imgPost() class="card-img-top car-img" style="width: 640px; height: 405px;">
+              <img :src="photo" class="card-img-top car-img" style="width: 640px; height: 405px;">
               <img_text class="centrado">{{this.title}}</img_text>
             </marco>
             </div>
-          </div>
+          </nuxt-link>
           <!--end of Point Of Interest -->
 </template>
 
@@ -19,18 +19,20 @@
 <script >
 
 export default {
+  name:"PointOfInterestCard",
     props: {
-        title: String, 
-        photo: Image, 
-        },
-        methods:{
-            imgPost(){
-              
-                return this.photo;
-            },
-            url(url){
-              return url;
-            }
+      id: {
+      type: Number,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    }, 
+    photo: {
+      type: String,
+      required: true,
+    }, 
         }
 }
 </script>
