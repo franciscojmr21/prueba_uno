@@ -6,13 +6,13 @@
                 :title1=getTitle1(allList,0)
                 :title2=getTitle2(allList,0)
               />
-              
+           <a>{{getDescription(allList,0)}}</a>   
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
             onclick="history.back()"
           >
-            Back to list
+            Back
           </button>
               </div>
               <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
@@ -42,7 +42,7 @@ export default {
     const { id } = route.params
     const { data } = await $axios.get('/api/itinerariesPOI/'+id)
     return {
-      allList: data
+      allList: data,
     }
   }, 
   methods: {
@@ -50,6 +50,11 @@ export default {
       const id = list[i].id;
       console.log("id: "+id)
       return list[i].id;
+    },
+     getDescription(list, i){
+      const id = list[i].description;
+      console.log("desc: "+id)
+      return list[i].description;
     },
     getTitle(list, i){
       const id = list[i].title;

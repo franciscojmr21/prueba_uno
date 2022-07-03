@@ -23,7 +23,7 @@
             class="btn btn-outline-secondary btn-block show_more-btn"
             onclick="history.back()"
           >
-            Back to list
+            Back
           </button>
     </div>
   </div>

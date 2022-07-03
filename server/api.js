@@ -30,7 +30,7 @@ async function initializeDatabaseConnection() {
         date: DataTypes.STRING, 
         locationName: DataTypes.STRING, 
         locationURL: DataTypes.STRING,
-        tipo: DataTypes.STRING, 
+        tipo: DataTypes.STRING,
     })
     const Service = database.define("service", {
         title1: DataTypes.STRING, 
@@ -40,11 +40,13 @@ async function initializeDatabaseConnection() {
     })
     const Itinerary = database.define("itinerary", {
         title1: DataTypes.STRING, 
-        title2: DataTypes.STRING, 
+        title2: DataTypes.STRING,
+        description: DataTypes.TEXT  
     })
     const PointsOfInterest = database.define("pointsOfInterest", {
         title: DataTypes.STRING, 
         photo: DataTypes.STRING, 
+        description: DataTypes.TEXT 
     })
 
     PointsOfInterest.hasMany(Event)
@@ -128,6 +130,7 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                description: element.description,
                 id: element.id,
             })
         }

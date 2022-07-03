@@ -1,23 +1,29 @@
 <template>
 <div class="container my-5" style="background-color: white;">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
+
+    <div style="position: center;">
         <point-of-interest-card-details
                 :id="id"
                 :title="title"
-                :photo="photo"/>
+                :photo="photo"
+                :description="description"/>
+                
+    </div>
+    
           <itinerary-card
             :id="itinerary.id"
             :title1="itinerary.title1"
             :title2="itinerary.title2"
           />
+    <div style="padding: 20px 20px 20px 20px;">
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
             onclick="history.back()"
           >
-            Back to list
+            Back
           </button>
-    </div>
+          </div>
   </div>
 </template>
 
@@ -38,7 +44,8 @@ export default {
     return {
       title: data.title,
       photo: data.photo,
-      itinerary: data.itinerary
+      itinerary: data.itinerary,
+      description: data.description
     }
   },
   methods: {

@@ -1,18 +1,19 @@
 <template>
-
-
-    <!-- single Point Of Interest -->
-
-          <!-- first item -->
-            <div class="col-sm-6" style="padding: 10px;">
-            <div><a>{{this.title}}</a></div>
-              
-              <div>
-                <img :src="photo" class="card-img-top car-img" style="width: 640px; height: 405px;">
-              </div>
-            </div>
-    
-          <!--end of Point Of Interest -->
+<div class="container" style="padding: 10px;">
+    <div >
+      <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+        <h1 class="section-title--special mx-1">{{this.title}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="padding: 20px 20px 20px 20px;">
+        <img :src="photo" class="card-img-top car-img" style="width: 640px; height: 405px;">
+      </div>
+      <div class="col" style="padding: 20px 20px 20px 20px; background:rgb(216, 214, 214);">
+        <a style="height: 405px; align-items: center; justify-content: center;">{{description}}</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 
@@ -32,7 +33,11 @@ export default {
     photo: {
       type: String,
       required: true,
-    }, 
+    },  
+    description: {
+      type: String,
+      required: true,
+    },
         }
 }
 </script>

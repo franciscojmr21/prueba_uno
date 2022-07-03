@@ -8,13 +8,13 @@
                 :dir="dir"
                 :hora="hora"
               />
-          <!-- <button
+          <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
             onclick="history.back()"
           >
-            Back to list
-          </button> -->
+            Back
+          </button>
     </div>
   </div>
 </template>
