@@ -5,22 +5,32 @@
 
           <!-- first item -->
     <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
-    
-            <div class="pointOfInterest-item" style="width: 640px; height: 405px;">
-              <marco>
-              <img :src="photo" class="card-img-top car-img" style="width: 640px; height: 405px;">
-              <img_text class="centrado">{{this.title}}</img_text>
-            </marco>
-            </div>
-          </nuxt-link>
+      <div class="pointOfInterest-item" style="width: 357px; height: 240px;">
+        <marco>
+          <img :src="photo" class="img-fluid gallery-img" style="width: 357px; height: 240px;">
+          <img_text class="centrado" >{{this.title}}</img_text>
+        </marco>
+      </div>
+    </nuxt-link>
           <!--end of Point Of Interest -->
+
+          <!-- <div class="row">
+            <div class="col-sm-6">
+              <marco>
+                <div class="gallery-item">
+                  <img src="img/placita.jpeg" class="img-fluid gallery-img">
+                  <img_text class="centrado">Barrio de Santa Cruz</img_text>
+                </div>
+              </marco>
+            </div>
+          </div> -->
 </template>
 
 
 <script >
 
 export default {
-  name:"PointOfInterestCard",
+  name:"PointOfInterestSmallCard",
     props: {
       id: {
       type: Number,

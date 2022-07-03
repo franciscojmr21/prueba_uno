@@ -14,39 +14,40 @@
     </div> -->
     <!-- end of video container -->
     <!-- video overlay -->
-    <div class="video-overlay"></div>
-    <!-- end of video overlay -->
-    <!-- itineary content -->
-    <div class="container py-5">
-       <!-- section title -->
-        <div class="row mb-5">
-          <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-            <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
-            <!-- <a href="Events.html#setas"> -->
-            <h1 class="section-title--special mx-1">itineraries</h1>
-          <!-- </a> -->
+    <div class="video-overlay">
+      <!-- end of video overlay -->
+      <!-- itineary content -->
+      <div class="container py-5">
+        <!-- section title -->
+          <div class="row mb-5">
+            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+              <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
+              <!-- <a href="Events.html#setas"> -->
+              <h1 class="section-title--special mx-1">itineraries</h1>
+              <!-- </a> -->
+            </div>
           </div>
+        <div class="row my-3">
+          <!-- col -->
+          <itinerary-card 
+                  v-for="(itinerary, itineraryIndex) of itineraryList"
+                  :key="`itinerary-index-${itineraryIndex}`"
+                  :id="itinerary.id"
+                  :title1="itinerary.title1"
+                  :title2="itinerary.title2"
+                />
+          <!-- end col -->
+          <!-- col -->
+          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
+          <!-- end col -->
+          <!-- col -->
+          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
+          <!-- end col -->
+          <!-- end col -->
+          <!-- col -->
+          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
+          <!-- end col -->
         </div>
-      <div class="row my-3">
-        <!-- col -->
-         <itinerary-card 
-                v-for="(itinerary, itineraryIndex) of itineraryList"
-                :key="`itinerary-index-${itineraryIndex}`"
-                :id="itinerary.id"
-                :title1="itinerary.title1"
-                :title2="itinerary.title2"
-              />
-        <!-- end col -->
-        <!-- col -->
-        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-        <!-- end col -->
-        <!-- col -->
-        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-        <!-- end col -->
-        <!-- end col -->
-        <!-- col -->
-        <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-        <!-- end col -->
       </div>
     </div>
   </section>

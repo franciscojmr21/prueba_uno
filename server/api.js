@@ -175,16 +175,33 @@ async function runMainApi() {
             })
         }
             
-            const result2 = await models.Service.findAll({where: { id:[1,2,3,4,5] }})
-            for (const element of result2) {
-                filtered.push({
-                    title1: element.title1,
-                    title2: element.title2,
-                    id: element.id,
-                })
-            }
-        
+        const result2 = await models.Service.findAll({where: { id:[1,2,3,4,5] }})
+        for (const element of result2) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
 
+        const result3 = await models.Itinerary.findAll({where: { id:[1,2,3,4] }})
+        for (const element of result3) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+
+        const result4 = await models.PointsOfInterest.findAll({where: { id:[1,2,3,4,5] }})
+        for (const element of result4) {
+            filtered.push({
+                title: element.title,
+                photo: element.photo,
+                id: element.id,
+            })
+        }
+        
         return res.json(filtered)
     })
 
