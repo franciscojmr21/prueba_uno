@@ -11,8 +11,7 @@
               <i class="fas fa-cogs"></i>
             </span>
             <div class="img-container" style="padding: 20px 20px 20px 20px;">
-            <h6 class="text-capitalize itineary-title">{{title1}}</h6>
-            <h5 class="text-uppercase font-weight-bold">{{title2}}</h5>
+            <h6 class="text-capitalize itineary-title">{{title1}} {{title2}}</h6>
             </div>
           </div>
         </div>

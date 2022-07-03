@@ -1,33 +1,33 @@
 <template>
-<div class="container my-5" style="background-color: white;">
-
-    <div style="position: center;">
+  <div class="container my-5" style="background-color: white;">
+    <div class="row">
+      <div class="col">
         <point-of-interest-card-details
                 :id="id"
                 :title="title"
                 :photo="photo"
                 :description="description"/>
-                
+      </div>
+      <div class="col">
+        <div v-if="itinerary!=null" class="col d-flex flex-wrap text-uppercase justify-content-center" style="padding: 20px 20px 20px 20px;">
+          <h1 class="section-title--special mx-1">Itinerary: </h1>
+        </div>
+        <div v-if="itinerary!=null" style="padding: 20px 20px 20px 20px;">
+            <itinerary-card
+              :id="itinerary.id"
+              :title1="itinerary.title1"
+              :title2="itinerary.title2"/>
+        </div>
+      </div>
+      <div style="padding: 20px 20px 20px 20px;">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-block show_more-btn"
+              onclick="history.back()">
+              Back
+            </button>
+      </div>
     </div>
-    <div v-if="itinerary!=null" class="col d-flex flex-wrap text-uppercase justify-content-center">
-        <h1 class="section-title--special mx-1">Itinirary: </h1>
-    </div>
-    <div v-if="itinerary!=null">
-          <itinerary-card
-            :id="itinerary.id"
-            :title1="itinerary.title1"
-            :title2="itinerary.title2"
-          />
-          </div>
-    <div style="padding: 20px 20px 20px 20px;">
-          <button
-            type="button"
-            class="btn btn-outline-secondary btn-block show_more-btn"
-            onclick="history.back()"
-          >
-            Back
-          </button>
-          </div>
   </div>
 </template>
 
