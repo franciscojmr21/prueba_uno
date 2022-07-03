@@ -31,7 +31,6 @@ With a happy and passionate spirit, Seville is a city that stands out not only f
 
 The information and practical data have been collected in July 2021. If you find any errors or see something that we should change, contact us.
            </p>
-           <!-- meter imagen -->
           </div>
         </div>
       </section>  
