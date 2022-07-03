@@ -45,6 +45,12 @@ async function initializeDatabaseConnection() {
         photo: DataTypes.STRING, 
     })
 
+    PointsOfInterest.hasMany(Event)
+    Event.belongsTo(PointsOfInterest)
+
+    Itinerary.hasMany(PointsOfInterest)
+    PointsOfInterest.belongsTo(Itinerary)
+    
     await database.sync({ force: true })
     return {
         Event,
@@ -65,10 +71,11 @@ const pageContentObject = {
         Integer vitae elit at nunc lacinia egestas. Etiam nec sagittis lorem. Phasellus consectetur mauris eget neque posuere, vitae sagittis massa congue. Etiam vitae eleifend odio, sit amet tempus ex. Ut semper feugiat erat, id consequat elit volutpat sed. Curabitur vel arcu at risus vehicula blandit in ut nunc. In nec pellentesque tellus. Maecenas vitae purus lacinia, tristique elit vitae, interdum est. Ut feugiat nulla et vestibulum efficitur. Suspendisse potenti. Duis ex dolor, vestibulum a leo eu, dapibus elementum ipsum. Curabitur euismod rhoncus nulla ac interdum. Mauris vulputate viverra scelerisque. Mauris ullamcorper tempus eros.`
     },
     about: {
-        title: "About",
-        image: "https://fs.i3lab.group/hypermedia/images/about.jpeg",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et tincidunt elit, in finibus elit. Aliquam nec posuere sem, at faucibus erat. Suspendisse iaculis lorem id odio placerat bibendum. Suspendisse potenti. Sed quis efficitur erat. Pellentesque non velit ipsum. Maecenas finibus felis a magna auctor finibus. Mauris tincidunt nibh sit amet ante consectetur, non cursus elit feugiat.
-        Integer vitae elit at nunc lacinia egestas. Etiam nec sagittis lorem. Phasellus consectetur mauris eget neque posuere, vitae sagittis massa congue. Etiam vitae eleifend odio, sit amet tempus ex. Ut semper feugiat erat, id consequat elit volutpat sed. Curabitur vel arcu at risus vehicula blandit in ut nunc. In nec pellentesque tellus. Maecenas vitae purus lacinia, tristique elit vitae, interdum est. Ut feugiat nulla et vestibulum efficitur. Suspendisse potenti. Duis ex dolor, vestibulum a leo eu, dapibus elementum ipsum. Curabitur euismod rhoncus nulla ac interdum. Mauris vulputate viverra scelerisque. Mauris ullamcorper tempus eros.`
+        title: "Who are us?",
+      //  image: "https://fs.i3lab.group/hypermedia/images/about.jpeg",
+        description: `With a happy and passionate spirit, Seville is a city that stands out not only for its great artistic and architectural importance, but also for having a pulsating history that is still felt at every step through the heart of its old town. Seville is a charming city that moves to the rhythm of flamenco, and as the song says, Seville has a special color. The city is located in the south of the Iberian Peninsula, it is the capital of Andalusia and one of the most populated cities in Spain behind Madrid, Barcelona and Valencia.The capital of Seville extends in a strategic enclave on the banks of the Guadalquivir, a river responsible for its great historical importance due to the fact that it turned the city into a prosperous commercial port that would unite it with "the Americas".
+
+        The Andalusian capital has excellent monuments such as the Torre del Oro, the Plaza de España or the Giralda, but sometimes you just need to get lost in the streets of the Triana or Santa Cruz neighbourhoods, or enjoy a quiet walk through the beautiful Parque de María Luisa, to connect with the traditions of the city and get infected with the Andalusian energy. This webpage has benn written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville. The information and practical data have been collected in July 2022.'
     },
 }
 
@@ -91,7 +98,7 @@ async function runMainApi() {
 
     app.get('/events/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.Event.findOne({ where: { id }})
+        const result = await models.Event.findOne({ where: { id }, include: [{model: models.PointsOfInterest}]})
         return res.json(result)
     })
 
@@ -103,7 +110,7 @@ async function runMainApi() {
 
     app.get('/pointsOfInterest/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.PointsOfInterest.findOne({ where: { id }})
+        const result = await models.PointsOfInterest.findOne({ where: { id }, include: [{model: models.Itinerary}]})
         return res.json(result)
     })
 

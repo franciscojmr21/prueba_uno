@@ -1,6 +1,174 @@
 
 
 export default async (models) => {
+
+    
+
+    const itineraryList = [ 
+        {
+            title1: "Day",
+            title2: "1",
+        },
+        {
+            title1: "Day",
+            title2: "2",
+        },
+        {
+            title1: "Day",
+            title2: "3",
+        },
+        {
+            title1: "Day",
+            title2: "4",
+        },
+    ]
+
+    const allItineraryList = await models.Itinerary.bulkCreate(itineraryList)
+
+    const pointsOfInterestList = [
+        {
+            title: "Giralda",
+            photo: "http://www.welikecrm.it/wp-content/uploads/2020/10/la-giralda-siviglia.jpg",
+            itineraryId: allItineraryList[0].id
+        },
+        {
+            title: "Catedral",
+            photo: "https://www.turismosevilla.org/sites/default/files/styles/grande_800x600_/public/2022-01/617-%286%29-SEVILLA-Catedral.JPG?h=895baa79&itok=LpK7HS_V",
+            itineraryId: allItineraryList[0].id
+        },
+        {
+            title: "Torre del Oro",
+            photo: "https://aws-tiqets-cdn.imgix.net/images/content/b0ffce651184411e8c8b9e05ad1e6d13.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=6cd4f59b89002b9d0b2dbd254c2a2272",
+            itineraryId: allItineraryList[0].id
+        },
+        {
+            title: "Real Alcazar",
+            photo: "https://www.dosde.com/discover/wp-content/uploads/2017/02/patio-de-doncellas-alcazar-de-sevilla-dosde-publishing.jpg",
+            itineraryId: allItineraryList[0].id
+        },
+        {
+            title: "Plaza de España",
+            photo: "https://blog.only-apartments.es/wp-content/uploads/2015/08/plaza-espa%C3%B1a-sevilla.jpg",
+            itineraryId: allItineraryList[1].id
+        },
+        {
+            title: "Barrio de Sanra Cruz",
+            photo: "https://media.traveler.es/photos/61376e8ad7c7024f9175eb3b/16:9/w_1968,h_1107,c_limit/136286.jpg",
+            itineraryId: allItineraryList[0].id
+        },
+        {
+            title: "Iglesia del Salvador",
+            photo: "https://multimedia.andalucia.org/content_images/main_image_43745.jpeg",
+            itineraryId: allItineraryList[2].id
+        },
+        {
+            title: "Basilica de la Macarena",
+            photo: "https://www.viaggioinandalusia.it/wp-content/uploads/2018/03/27025571140_4338e92a5e_k.jpg",
+            itineraryId: allItineraryList[3].id
+            
+        },
+        {
+            title: "Casa de Pilatos",
+            photo: "https://www.weekendpremium.it/wp/wp-content/uploads/2018/01/casa-pilatos-sevilla-800x445.jpg",
+        },
+        {
+            title: "Setas de Sevilla",
+            photo: "https://www.visitasevilla.es/sites/default/files/place/img_header/setas.jpg",
+            itineraryId: allItineraryList[2].id
+        },
+        {
+            title: "Real Maestranza",
+            photo: "https://www.dronestagr.am/wp-content/uploads/2017/06/WC9B8368ok-2.jpg",
+            itineraryId: allItineraryList[2].id
+        },
+        {
+            title: "Plaza América",
+            photo: "https://lasevillamuseistica.files.wordpress.com/2013/03/plaza-de-america-sevilla-2003-a223454313.jpg",
+            itineraryId: allItineraryList[1].id
+        },
+        {
+            title: "Archivo General de Indias",
+            photo: "https://offloadmedia.feverup.com/sevillasecreta.co/wp-content/uploads/2015/11/19140934/shutterstock_541372600-1.jpg",
+            itineraryId: allItineraryList[2].id
+        },
+        {
+            title: "Parque María Luisa",
+            photo: "https://www.labelleseville.com/wp-content/uploads/que-ver-en-sevilla-maria-luisa-sevilla.webp",
+            itineraryId: allItineraryList[1].id
+            
+        },
+        {
+            title: "Real fabrica de tabacos",
+            photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d0/59/86/cancellata-d-ingresso.jpg?w=1200&h=1200&s=1",
+            itineraryId: allItineraryList[1].id           
+        },
+        {
+            title: "Puente de Triana",
+            photo: "https://www.visitasevilla.es/sites/default/files/place/img_header/puentetriana.jpg",
+            itineraryId: allItineraryList[0].id
+            
+        },
+        {
+            title: "Plaza Nueva",
+            photo: "https://upload.wikimedia.org/wikipedia/commons/6/65/Sevilla_Plaza_Nueva_San_Fernando_18-03-2011_17-46-44.jpg",
+            itineraryId: allItineraryList[2].id
+            
+        },
+        {
+            title: "Alameda de Hércules",
+            photo: "https://offloadmedia.feverup.com/sevillasecreta.co/wp-content/uploads/2015/12/19141235/shutterstock_1019972278-1.jpg",
+            itineraryId: allItineraryList[3].id
+            
+        },
+        {
+            title: "Palacio de San Telmo",
+            photo: "https://www.visitasevilla.es/sites/default/files/place/img_header/palacio_san_telmo.jpg",
+            itineraryId: allItineraryList[1].id
+            
+        },
+        {
+            title: "Puente del Alamillo",
+            photo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Puente_del_Alamillo_en_Sevilla.jpg",
+            itineraryId: allItineraryList[3].id
+        },
+        {
+            title: "Torre Sevilla",
+            photo: "https://www.cctorresevilla.com/wp-content/uploads/sites/10/2021/10/AperturaSlider.jpg",
+            
+        },
+        
+        {
+            title: "Centro Histórico",
+            photo: "https://sevillando.b-cdn.net/wp-content/uploads/sites/16/2022/03/Casco-Antiguo-sevilla.jpg",
+            
+        },
+        {
+            title: "Auditorio Rocio Jurado",
+            photo: "http://www.manologarciaycia.com/wp-content/uploads/2016/05/mg_gus.jpg?x87507",
+            itineraryId: allItineraryList[3].id
+            
+        },
+        {
+            title: "Estadio Olímpico La Cartuja",
+            photo: "https://static4.abc.es/media/deportes/2018/12/06/cartuja-k4LI--1248x698@abc.jpg",
+            itineraryId: allItineraryList[3].id
+            
+        },
+        {
+            title: "El Ferial",
+            photo: "https://phantom-marca.unidadeditorial.es/342a76c45b7b417c2899186881ebd60c/resize/1320/f/jpg/assets/multimedia/imagenes/2022/04/26/16509864385400.jpg",
+            
+        },
+        {
+            title: "Acuario de Sevilla",
+            photo: "https://thumbnail.pa-community.com/d3/77/71b034a81456f9cfc771889ec09a/62c11b2a03bb0948aacbcacf52e50bbd.jpg",
+            itineraryId: allItineraryList[1].id
+        },
+        
+    ]
+
+    const allPointsOfInterestList = await models.PointsOfInterest.bulkCreate(pointsOfInterestList)
+
     const eventList = [
         {
             title: "Puro Latino",
@@ -12,7 +180,8 @@ export default async (models) => {
             date: "01/07/22 - 02/07/22",
             eventWeb: "https://purolatino.es/sevilla/",
             ticketWeb: "https://purolatino.es/sevilla/entradas/",
-            tipo: "summer"
+            tipo: "summer",
+            pointsOfInterestId: allPointsOfInterestList[23].id
         },
         {
             title: "Semana Santa",
@@ -24,7 +193,8 @@ export default async (models) => {
             date: "10/04/22 - 16/04/22",
             eventWeb: "https://www.sevilla.org/fiestas-de-la-ciudad/semana-santa/",
             ticketWeb: "",
-            tipo: "spring"
+            tipo: "spring",
+            pointsOfInterestId: allPointsOfInterestList[21].id
         },
         {
             title: "Feria de Sevilla",
@@ -36,7 +206,8 @@ export default async (models) => {
             date: "01/05/22 - 07/05/22",
             eventWeb: "https://www.sevilla.org/fiestas-de-la-ciudad/feria-de-sevilla",
             ticketWeb: "",
-            tipo: "spring"
+            tipo: "spring",
+            pointsOfInterestId: allPointsOfInterestList[24].id
         },
         {
             title: "Setas de Sevilla",
@@ -48,7 +219,8 @@ export default async (models) => {
             date: "30/05/22 - 30/06/22",
             eventWeb: "https://checkoutentradas4.elcorteingles.es/public/janto/main.php?Nivel%3DmenuCalendario%26idEvento%3DFEELINGNOCHE",
             ticketWeb: "https://www.elcorteingles.es/entradas/cultura/entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/?performance_url=entradas-experiencia-inmersiva-noche-sevilla-FEELINGNOCHEFEELINGNOCHESETASSEV/",
-            tipo: ""
+            tipo: "",
+            pointsOfInterestId: allPointsOfInterestList[9].id
         },
         {
             title: "Malú Concert",
@@ -60,7 +232,8 @@ export default async (models) => {
             date: "04/06/22 - 04/06/22",
             eventWeb: "https://www.entradas.com/event/malu-mil-batallas-auditorio-rocio-jurado-antigua-cartuja-14620138/",
             ticketWeb: "https://www.entradas.com/event/malu-mil-batallas-auditorio-rocio-jurado-antigua-cartuja-14620138/",
-            tipo: "summer"
+            tipo: "summer",
+            pointsOfInterestId: allPointsOfInterestList[22].id
         },
         {
             title: "Seville Aquarium",
@@ -72,7 +245,8 @@ export default async (models) => {
             date: "31/05/22 - 31/12/22",
             eventWeb: "https://www.acuariosevilla.es/",
             ticketWeb: "https://entradas.acuariosevilla.es/TicketOffice/Index.aspx",
-            tipo: ""
+            tipo: "",
+            pointsOfInterestId: allPointsOfInterestList[25].id
         },
         {
             title: "Game of Thrones Tour",
@@ -84,7 +258,8 @@ export default async (models) => {
             date: "10/04/22 - 31/12/22",
             eventWeb: "https://lasuperagenda.com/eventos/sevilla/exposiciones/tour-de-juego-de-tronos-por-el-alcazar-de-sevilla/",
             ticketWeb: "https://www.civitatis.com/es/sevilla/tour-juego-tronos-alcazar?aid=8738",
-            tipo: ""
+            tipo: "",
+            pointsOfInterestId: allPointsOfInterestList[3].id
         },
         {
             title: "Cruise on Guadalquivir",
@@ -96,7 +271,8 @@ export default async (models) => {
             date: "01/05/22 - 31/12/22",
             eventWeb: "https://cutt.ly/IKNDjId",
             ticketWeb: "https://cutt.ly/IKNDjId",
-            tipo: ""
+            tipo: "",
+            pointsOfInterestId: allPointsOfInterestList[15].id
         },
         {
             title: "Flamenco",
@@ -120,7 +296,8 @@ export default async (models) => {
             date: "01/07/22 - 31/12/22",
             eventWeb: "https://naturanda.com/tour-leyendas-de-triana/",
             ticketWeb: "https://naturanda.com/tour-leyendas-de-triana/",
-            tipo: ""
+            tipo: "",
+            pointsOfInterestId: allPointsOfInterestList[15].id
         },
     ]
     await models.Event.bulkCreate(eventList)
@@ -169,126 +346,5 @@ export default async (models) => {
     await models.Service.bulkCreate(serviceList)
 
 
-    const itineraryList = [ 
-        {
-            title1: "Day",
-            title2: "1",
-        },
-        {
-            title1: "Day",
-            title2: "2",
-        },
-        {
-            title1: "Day",
-            title2: "3",
-        },
-        {
-            title1: "Day",
-            title2: "4",
-        },
-    ]
-    await models.Itinerary.bulkCreate(itineraryList)
-
-    const pointsOfInterestList = [
-        {
-            title: "Giralda",
-            photo: "http://www.welikecrm.it/wp-content/uploads/2020/10/la-giralda-siviglia.jpg",
-        },
-        {
-            title: "Catedral",
-            photo: "https://www.turismosevilla.org/sites/default/files/styles/grande_800x600_/public/2022-01/617-%286%29-SEVILLA-Catedral.JPG?h=895baa79&itok=LpK7HS_V",
-           
-        },
-        {
-            title: "Torre del Oro",
-            photo: "https://aws-tiqets-cdn.imgix.net/images/content/b0ffce651184411e8c8b9e05ad1e6d13.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=6cd4f59b89002b9d0b2dbd254c2a2272",
-            
-        },
-        {
-            title: "Real Alcazar",
-            photo: "https://aws-tiqets-cdn.imgix.net/images/content/b0ffce651184411e8c8b9e05ad1e6d13.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=6cd4f59b89002b9d0b2dbd254c2a2272",
-            
-        },
-        {
-            title: "Plaza de España",
-            photo: "https://blog.only-apartments.es/wp-content/uploads/2015/08/plaza-espa%C3%B1a-sevilla.jpg",
-            
-        },
-        {
-            title: "Barrio de Sanra Cruz",
-            photo: "https://media.traveler.es/photos/61376e8ad7c7024f9175eb3b/16:9/w_1968,h_1107,c_limit/136286.jpg",
-        },
-        {
-            title: "Iglesia del Salvador",
-            photo: "2wCEAAkGBxQUExYTFBQXFxYYGh4ZGRkZGiAeIBkaHB4gHBkfHR8aHikhHB8nIR8bIzIiJiosMC8vGyA1OjUtOSkuMCwBCgoKDg0OHBAQHDQnIScuMC4uLjcuLi4uLi4wLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv",
-        },
-        {
-            title: "Basilica de la Macarena",
-            photo: "https://aws-tiqets-cdn.imgix.net/images/content/b0ffce651184411e8c8b9e05ad1e6d13.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=6cd4f59b89002b9d0b2dbd254c2a2272",
-            
-        },
-        {
-            title: "Casa de Pilatos",
-            photo: "2wCEAAoHCBQVFBgVFRQZGBgYGh0bGRsbGyEdGhoaIRkaGhodGxocIS0kGx0qHx0bJTcmKi8xNDQ0HSQ6PzozPi0zNDEBCwsLEA8QHxISHzwqJCo1Mzw1Mzw2MzMzMzMzMzUzMzMzMzUzNTMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM",
-        },
-        {
-            title: "Setas de Sevilla",
-            photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHo_WQC-dlz32LHavKi9cZJwwhzeBi-XJn0g&usqp=CAU",
-        },
-        {
-            title: "Real Maestranza",
-            photo: "https://www.dronestagr.am/wp-content/uploads/2017/06/WC9B8368ok-2.jpg",
-        },
-        {
-            title: "Plaza América",
-            photo: "https://lasevillamuseistica.files.wordpress.com/2013/03/plaza-de-america-sevilla-2003-a223454313.jpg",
-        },
-        {
-            title: "Archivo General de Indias",
-            photo: "https://offloadmedia.feverup.com/sevillasecreta.co/wp-content/uploads/2015/11/19140934/shutterstock_541372600-1.jpg",
-        },
-        {
-            title: "Plaza América",
-            photo: "https://aws-tiqets-cdn.imgix.net/images/content/b0ffce651184411e8c8b9e05ad1e6d13.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=6cd4f59b89002b9d0b2dbd254c2a2272",
-            
-        },
-        {
-            title: "Real fabrica de tabacos",
-            photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d0/59/86/cancellata-d-ingresso.jpg?w=1200&h=1200&s=1"           
-        },
-        {
-            title: "Puente de Triana",
-            photo: "https://www.visitasevilla.es/sites/default/files/place/img_header/puentetriana.jpg",
-            
-        },
-        {
-            title: "Plaza Nueva",
-            photo: "https://upload.wikimedia.org/wikipedia/commons/6/65/Sevilla_Plaza_Nueva_San_Fernando_18-03-2011_17-46-44.jpg",
-            
-        },
-        {
-            title: "Alameda de Hércules",
-            photo: "https://offloadmedia.feverup.com/sevillasecreta.co/wp-content/uploads/2015/12/19141235/shutterstock_1019972278-1.jpg",
-            
-        },
-        {
-            title: "Palacio de San Telmo",
-            photo: "https://www.visitasevilla.es/sites/default/files/place/img_header/palacio_san_telmo.jpg",
-            
-        },
-        {
-            title: "Puente del Alamillo",
-            photo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Puente_del_Alamillo_en_Sevilla.jpg",
-            
-        },
-        {
-            title: "Torre Sevilla",
-            photo: "https://www.cctorresevilla.com/wp-content/uploads/sites/10/2021/10/AperturaSlider.jpg",
-            
-        },
-        
-    ]
-
-    await models.PointsOfInterest.bulkCreate(pointsOfInterestList)
 
 }

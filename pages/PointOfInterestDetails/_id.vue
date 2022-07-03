@@ -5,10 +5,15 @@
                 :id="id"
                 :title="title"
                 :photo="photo"/>
+          <itinerary-card
+            :id="itinerary.id"
+            :title1="itinerary.title1"
+            :title2="itinerary.title2"
+          />
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
-            @click="backToList"
+            onclick="history.back()"
           >
             Back to list
           </button>
@@ -18,11 +23,13 @@
 
 <script>
 import CommonMixin from '~/mixins/common'
+import ItineraryCard from '~/components/ItineraryCard.vue'
 import PointOfInterestCardDetails from '~/components/PointOfInterestCardDetails.vue'
 export default {
   name: 'PointOfInterestDetails',
   components: {
     PointOfInterestCardDetails,
+    ItineraryCard
   },
   mixins: [CommonMixin],
   async asyncData({ route, $axios }) {
@@ -30,7 +37,8 @@ export default {
     const { data } = await $axios.get('/api/pointsOfInterest/' + id)
     return {
       title: data.title,
-      photo: data.photo
+      photo: data.photo,
+      itinerary: data.itinerary
     }
   },
   methods: {

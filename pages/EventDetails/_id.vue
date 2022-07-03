@@ -13,10 +13,15 @@
                 :eventWeb="eventWeb"
                 :ticketWeb="ticketWeb"
           />
+          <point-of-interest-card
+            :id="pointsOfInterest.id"
+            :title="pointsOfInterest.title"
+            :photo="pointsOfInterest.photo"
+          />
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
-            @click="backToList"
+            onclick="history.back()"
           >
             Back to list
           </button>
@@ -27,10 +32,12 @@
 <script>
 import CommonMixin from '~/mixins/common'
 import EventCard from '~/components/EventCardDetails.vue'
+import PointOfInterestCard from '~/components/PointOfInterestCard.vue'
 export default {
   name: 'EventDetails',
   components: {
     EventCard,
+    PointOfInterestCard
   },
   mixins: [CommonMixin],
   async asyncData({ route, $axios }) {
@@ -45,7 +52,8 @@ export default {
       prize: data.prize,
       date: data.date,
       locationName: data.locationName,
-      locationURL: data.locationURL
+      locationURL: data.locationURL,
+      pointsOfInterest: data.pointsOfInterest
     }
   },
   head(){

@@ -9,7 +9,7 @@
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
-            @click="backToList"
+            onclick="history.back()"
           >
             Back to list
           </button>
