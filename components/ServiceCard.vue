@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="services">
     <nuxt-link :to="`/ServiceDetails/${id}`" class="services-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
         <h5 class="font-weight-bold mx-1">{{title1}}</h5>
         <h5 class="mx-1">{{title2}}</h5>
@@ -56,7 +56,7 @@ export default {
 .services-item{
   background: var(--mainWhite);
   border-radius: 0.5rem;
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }

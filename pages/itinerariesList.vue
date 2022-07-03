@@ -5,29 +5,18 @@
 
     </head>
     <body>
-      <section class="itinearies py-2 d-flex align-items-center" id="itinearies">
-    <!-- video container -->
- <!-- <div class="video-container">
-      <video class="video-item" autoplay loop muted>
-        <source src="assets/videoBcg.mp4" type="video/mp4">Your browser does not support video tag
-      </video>
-    </div> -->
-    <!-- end of video container -->
-    <!-- video overlay -->
-    <div class="video-overlay">
-      <!-- end of video overlay -->
-      <!-- itineary content -->
-      <div class="container py-5">
+      <section class="itineary_form py-5" id="itineraries" style="background: rgb(216, 214, 214);">
+      <div class="container">
         <!-- section title -->
-          <div class="row mb-5">
-            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-              <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
-              <!-- <a href="Events.html#setas"> -->
-              <h1 class="section-title--special mx-1">itineraries</h1>
-              <!-- </a> -->
-            </div>
+          <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+            <h1 class="section-title--special mx-1">Itinerary</h1>
           </div>
-        <div class="row my-3">
+        <!-- end of section title -->
+      </div>
+      <section class="itinearies py-2 d-flex align-items-center" id="itinearies">
+        <div class="video-overlay">
+          <div class="container py-5">
+            <div class="row my-3">
           <!-- col -->
           <itinerary-card 
                   v-for="(itinerary, itineraryIndex) of itineraryList"
@@ -36,21 +25,12 @@
                   :title1="itinerary.title1"
                   :title2="itinerary.title2"
                 />
-          <!-- end col -->
-          <!-- col -->
-          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-          <!-- end col -->
-          <!-- col -->
-          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-          <!-- end col -->
-          <!-- end col -->
-          <!-- col -->
-          <!-- <Itinerary :title1="it_title1" :title2="it_title2"></Itinerary> -->
-          <!-- end col -->
+          </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>  
+      <!-- end of itinearies section -->
+    </section>
     </body>
     
   </html>

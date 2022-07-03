@@ -3,7 +3,7 @@
   <html>
     <body>
       <section class="service py-5" id="services">
-        <div class="container">
+        <div class="container" >
           <!-- section title -->
           <div class="row mb-5">
             <div class="col d-flex flex-wrap text-uppercase justify-content-center">
@@ -50,10 +50,24 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainOrange:rgba(241, 99, 64, 0.7);
+  --transparentOrange:rgba(241, 99, 64, 0.7);
+  --mainWhite:#FFFFFF;
+  --mainGrey:#9c9c9c;
+  --mainBlack:#000000;
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e3b505;
+}
+
 .section-title--special{
   background: var(--transparentOrange);
   color: var(--mainWhite);
   padding: 0.5rem 2rem;
   clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
 }
+
 </style>
