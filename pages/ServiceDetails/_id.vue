@@ -5,14 +5,16 @@
                 :id="id"
                 :title1="title1"
                 :title2="title2"
+                :dir="dir"
+                :hora="hora"
               />
-          <button
+          <!-- <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
             onclick="history.back()"
           >
             Back to list
-          </button>
+          </button> -->
     </div>
   </div>
 </template>
@@ -31,7 +33,9 @@ export default {
     const { data } = await $axios.get('/api/services/'+id)
     return {
       title1: data.title1,
-      title2: data.title2
+      title2: data.title2,
+      dir: data.dir,
+      hora: data.hora
     }
   },
   head(){

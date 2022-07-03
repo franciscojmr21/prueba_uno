@@ -1,11 +1,12 @@
 <template>
   <div class="container my-5" style="background-color: white;">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
-        <itinerary-card
-                :id="id"
-                :title1="title1"
-                :title2="title2"
+        <itinerary-card-details
+                :id=getId(allList,0)
+                :title1=getTitle1(allList,0)
+                :title2=getTitle2(allList,0)
               />
+              
           <button
             type="button"
             class="btn btn-outline-secondary btn-block show_more-btn"
@@ -13,35 +14,62 @@
           >
             Back to list
           </button>
+              </div>
+              <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg">
+              <point-of-interest-small-card 
+                v-for="(pointsOfInterest, pointsOfInterestIndex) of allList"
+                :key="`pointsOfInterest-index-${pointsOfInterestIndex}`"
+                :id="pointsOfInterest.id"
+                :title="pointsOfInterest.title"
+                :photo="pointsOfInterest.photo"
+              />
+              </div>
     </div>
-  </div>
 </template>
 
 <script>
 import CommonMixin from '~/mixins/common'
-import ItineraryCard from '~/components/ItineraryCard.vue'
+import ItineraryCardDetails from '~/components/ItineraryCardDetails.vue'
+import PointOfInterestSmallCard from '~/components/PointOfInterestSmallCard.vue'
 export default {
   name: 'ItineraryDetails',
   components: {
-    ItineraryCard,
+    ItineraryCardDetails,
+    PointOfInterestSmallCard
   },
   mixins: [CommonMixin],
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('/api/itineraries/'+id)
+    const { data } = await $axios.get('/api/itinerariesPOI/'+id)
     return {
-      title1: data.title1,
-      title2: data.title2
+      allList: data
     }
-  },
-  head(){
-    return {
-      title: this.title
-    }
-  },
+  }, 
   methods: {
-    backToList() {
-      this.$router.push('/itinerariesList')
+     getId(list, i){
+      const id = list[i].id;
+      console.log("id: "+id)
+      return list[i].id;
+    },
+    getTitle(list, i){
+      const id = list[i].title;
+      console.log("title: "+id)
+      return list[i].title;
+    },
+    getTitle1(list, i){
+      const id = list[i].title1;
+      console.log("title1: "+id)
+      return list[i].title1;
+    },
+    getTitle2(list, i){
+      const id = list[i].title2;
+      console.log("title2: "+id)
+      return list[i].title2;
+    },
+    getPhoto(list, i){
+      const id = list[i].photo;
+      console.log("photo: "+id)
+      return list[i].photo;
     },
   },
 }

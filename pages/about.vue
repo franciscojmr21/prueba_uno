@@ -25,7 +25,12 @@
         <div class="video-overlay">
           <div class="container py-5">
            <custom-page :title="title" :description="description" /> 
-           <a href="ServiceList.vue">Cathedral</a>
+           <p>
+            <br>
+With a happy and passionate spirit, Seville is a city that stands out not only for its great artistic and architectural importance, but also for having a pulsating history that is still felt at every step through the heart of its old town. Seville is a charming city that moves to the rhythm of flamenco, and as the song says, Seville has a special color. The city is located in the south of the Iberian Peninsula, it is the capital of Andalusia and one of the most populated cities in Spain behind Madrid, Barcelona and Valencia.The capital of Seville extends in a strategic enclave on the banks of the Guadalquivir, a river responsible for its great historical importance due to the fact that it turned the city into a prosperous commercial port that would unite it with "the Americas". The Andalusian capital has excellent monuments such as the <a href="/PointOfInterestDetails/3" style="color:black"><b>Torre del Oro</b></a>, or the <a href="/PointOfInterestDetails/1" style="color:black"><b>Giralda</b></a>, but sometimes you just need to get lost in the streets of the <a href="/PointOfInterestDetails/16" style="color:black"><b>Triana</b></a> or <a href="/PointOfInterestDetails/6" style="color:black"><b>Santa Cruz neighbourhods</b></a>, or enjoy a quiet walk through the beautiful <a href="/PointOfInterestDetails/14" style="color:black"><b>Parque Maria Luisa</b></a>, to connect with the traditions of the city and get infected with the Andalusian energy. This webpage has benn written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville. The information and practical data have been collected in July 2022. Written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville.
+
+The information and practical data have been collected in July 2021. If you find any errors or see something that we should change, contact us.
+           </p>
            <!-- meter imagen -->
           </div>
         </div>
@@ -42,7 +47,7 @@ import CustomPage from '~/components/CustomPage.vue'
 export default {
   name: 'AboutPage',
   components: {
-    CustomPage,
+     CustomPage,
   },
   data() {
     return {}

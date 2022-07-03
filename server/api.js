@@ -35,6 +35,8 @@ async function initializeDatabaseConnection() {
     const Service = database.define("service", {
         title1: DataTypes.STRING, 
         title2: DataTypes.STRING, 
+        dir: DataTypes.STRING,
+        hora: DataTypes.STRING
     })
     const Itinerary = database.define("itinerary", {
         title1: DataTypes.STRING, 
@@ -73,9 +75,7 @@ const pageContentObject = {
     about: {
         title: "Who are us?",
       //  image: "https://fs.i3lab.group/hypermedia/images/about.jpeg",
-        description: `With a happy and passionate spirit, Seville is a city that stands out not only for its great artistic and architectural importance, but also for having a pulsating history that is still felt at every step through the heart of its old town. Seville is a charming city that moves to the rhythm of flamenco, and as the song says, Seville has a special color. The city is located in the south of the Iberian Peninsula, it is the capital of Andalusia and one of the most populated cities in Spain behind Madrid, Barcelona and Valencia.The capital of Seville extends in a strategic enclave on the banks of the Guadalquivir, a river responsible for its great historical importance due to the fact that it turned the city into a prosperous commercial port that would unite it with "the Americas".
-
-        The Andalusian capital has excellent monuments such as the Torre del Oro, the Plaza de España or the Giralda, but sometimes you just need to get lost in the streets of the Triana or Santa Cruz neighbourhoods, or enjoy a quiet walk through the beautiful Parque de María Luisa, to connect with the traditions of the city and get infected with the Andalusian energy. This webpage has benn written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville. The information and practical data have been collected in July 2022.'
+        description: ``
     },
 }
 
@@ -118,6 +118,30 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Itinerary.findOne({ where: { id }})
         return res.json(result)
+    })
+
+    app.get('/itinerariesPOI/:id', async (req, res) => {
+        const filtered = []
+        const id = +req.params.id
+        const result = await models.Itinerary.findAll({where: {id}})
+        for (const element of result) {
+            filtered.push({
+                title1: element.title1,
+                title2: element.title2,
+                id: element.id,
+            })
+        }
+
+        const result4 = await models.PointsOfInterest.findAll({where: {itineraryId:id}})
+        for (const element of result4) {
+            filtered.push({
+                title: element.title,
+                photo: element.photo,
+                id: element.id,
+            })
+        }
+        
+        return res.json(filtered)
     })
 
     // HTTP GET api that returns all the cats in our actual database
@@ -293,6 +317,8 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                dir: element.dir,
+                hora: element.hora,
                 id: element.id,
             })
         }

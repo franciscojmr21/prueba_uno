@@ -4,7 +4,7 @@
     <!-- single Point Of Interest -->
 
           <!-- first item -->
-    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
+    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;" v-if="title!=null">
       <div class="pointOfInterest-item" style="width: 357px; height: 240px;">
         <marco>
           <img :src="photo" class="img-fluid gallery-img" style="width: 357px; height: 240px;">

@@ -306,39 +306,57 @@ export default async (models) => {
         {
             title1: "Virgen Macarena",
             title2: "Hospital",
+            dir: "Calle Pintores 2",
+            hora:"8:00 - 21:00"
            
         },
         {
             title1: "Virgen del Rocio University",
             title2: "Hospital",
+            dir: "Calle Antonio Machado 2",
+            hora:"8:00 - 21:30"
         },
         {
             title1: "Maria Eugennia Cruz Roja Sevilla",
             title2: "Hospital",
+            dir: "Calle Antonio Lucas 3",
+            hora:"8:00 - 22:00"
         },
         {
             title1: "Reyes CB",
             title2: "Pharmacy",
+            dir: "Calle Luis Montoto 4",
+            hora:"8:00 - 21:15"
         },
         {
             title1: "San Pablo 24H",
             title2: "Pharmacy",
+            dir: "Calle Miguel 3",
+            hora:"8:00 - 19:00"
         },
         {
             title1: "María Auxiliadora",
             title2: "Pharmacy",
+            dir: "Calle Josan 7",
+            hora:"10:00 - 21:00"
         },
         {
             title1: "Spanish",
             title2: "Bank",
+            dir: "Calle Francisco Muñoz 4",
+            hora:"8:00 - 11:00"
         },
         {
             title1: "Eurostars Tower",
             title2: "Hotel",
+            dir: "Calle Vacie 45",
+            hora:"8:00 - 21:40"
         },
         {
             title1: "Duquesa",
             title2: "Hotel",
+            dir: "Calle Casillas 14",
+            hora:"8:00 - 23:00"
         },
 
 
