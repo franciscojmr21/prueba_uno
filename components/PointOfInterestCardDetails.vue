@@ -10,7 +10,7 @@
         <img :src="photo" class="card-img-top car-img" style="width: 640px; height: 405px;">
       </div>
       <div class="col" style="padding: 20px 20px 20px 20px; background:rgb(216, 214, 214);">
-        <a style="height: 405px; align-items: center; justify-content: center;">{{description}}</a>
+        <h1 class="text-center">{{description}}</h1>
       </div>
     </div>
   </div>

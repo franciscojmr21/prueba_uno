@@ -9,12 +9,16 @@
                 :description="description"/>
                 
     </div>
-    
+    <div v-if="itinerary!=null" class="col d-flex flex-wrap text-uppercase justify-content-center">
+        <h1 class="section-title--special mx-1">Itinirary: </h1>
+    </div>
+    <div v-if="itinerary!=null">
           <itinerary-card
             :id="itinerary.id"
             :title1="itinerary.title1"
             :title2="itinerary.title2"
           />
+          </div>
     <div style="padding: 20px 20px 20px 20px;">
           <button
             type="button"

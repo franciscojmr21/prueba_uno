@@ -18,12 +18,13 @@ export default async (models) => {
         {
             title1: "Day",
             title2: "3",
-            description: "",
+            description: "the most central and busy streets of the city. The tour starts from one of the northern areas of the historical center visiting one of the most contemporary buildings of the city with a very unique architectural style. After that we will visit one of the most conical squares where one of the most important churches of the city is located. Near this square there is a very busy square where the town hall is located. After that we will visit the Archivo de Indias, one of the most emblematic buildings of the city. To finish the tour we will visit the great Maestranza on the river bank so you can enjoy the sunset in it.",
+
         },
         {
             title1: "Day",
             title2: "4",
-            description: "",
+            description: "The last day in the city will be a visit to some areas further away from the center where we will pass by some important buildings for musical and sporting events such as the Rocío Jurado Auditorium or the Olympic Stadium of La Cartuja. You will also see one of the most famous bridges of the city made by the great Spanish architect Santiago Calatrava. Finally there will be a visit to a very emblematic city that is located in the old walled city and ending in the Plaza de Hercules which is one of the most atmospheric of the city and where you can spend the night in the bars.",
         },
     ]
 
