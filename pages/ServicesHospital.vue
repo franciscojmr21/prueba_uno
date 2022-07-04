@@ -38,6 +38,19 @@
 import ServiceCard from '~/components/ServiceCard.vue'
 export default {
   name: 'ServiceList',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     ServiceCard,
   },

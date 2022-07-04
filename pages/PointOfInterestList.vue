@@ -36,6 +36,19 @@
 import PointOfInterestCard from '~/components/PointOfInterestCard.vue'
 export default {
   name: 'PointOfInterestList',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     PointOfInterestCard,
   },

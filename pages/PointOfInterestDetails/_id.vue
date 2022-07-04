@@ -14,7 +14,7 @@
                   justify-content-center 
                   text-center">
         <div cl v-if="itinerary!=null">
-            <itinerary-card-data
+            <itinerary-card
               :id="itinerary.id"
               :title1="'Itineray:   '+itinerary.title1"
               :title2="itinerary.title2"/>
@@ -34,13 +34,13 @@
 
 <script>
 import CommonMixin from '~/mixins/common'
-import ItineraryCardData from '~/components/ItineraryCardData.vue'
+import ItineraryCard from '~/components/ItineraryCard.vue'
 import PointOfInterestCardDetails from '~/components/PointOfInterestCardDetails.vue'
 export default {
   name: 'PointOfInterestDetails',
   components: {
     PointOfInterestCardDetails,
-    ItineraryCardData
+    ItineraryCard
   },
   mixins: [CommonMixin],
   async asyncData({ route, $axios }) {

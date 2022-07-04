@@ -279,6 +279,19 @@ export default {
     PointOfInterestCard,
     PointOfInterestSmallCard
   },
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   async asyncData({ $axios }) {
     const {data} = await $axios.get('/api/allHomePage')
     return {

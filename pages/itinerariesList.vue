@@ -40,6 +40,19 @@
 import ItineraryCard from '~/components/ItineraryCard.vue'
 export default {
   name: 'ItineraryList',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     ItineraryCard,
   },

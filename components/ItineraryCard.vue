@@ -5,11 +5,8 @@
 
           <!-- first item -->
  <!-- col -->
-        <nuxt-link :to="`/ItineraryDetails/${id}`" class="col-8 mx-auto col-lg-6 col-md-4 my-3 text-white">
+        <nuxt-link :to="`/ItineraryDetails/${id}`" class="col-8 mx-auto col-lg-6 col-md-4 my-3 text-black">
           <div class="itineary py-5 pl-4">
-           <span class="itineary-icon">
-              <i class="fas fa-cogs"></i>
-            </span>
             <div class="img-container" style="padding: 20px 20px 20px 20px;">
               <h2 class="text-capitalize itineary-title">{{title1}}&nbsp;&nbsp;{{title2}}</h2>
             </div>

@@ -44,7 +44,23 @@ The information and practical data have been collected in July 2021. If you find
 <script>
 import CustomPage from '~/components/CustomPage.vue'
 export default {
+  
+
+
   name: 'AboutPage',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
      CustomPage,
   },

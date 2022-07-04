@@ -1,10 +1,6 @@
 <template>
 
-
-    <!-- single Point Of Interest -->
-
-          <!-- first item -->
-    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;" v-if="title!=null">
+    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-4" style="padding: 10px;" v-if="title!=null">
       <div class="pointOfInterest-item" style="width: 357px; height: 240px;">
         <marco>
           <img :src="photo" class="img-fluid gallery-img" style="width: 357px; height: 240px;">
@@ -12,18 +8,6 @@
         </marco>
       </div>
     </nuxt-link>
-          <!--end of Point Of Interest -->
-
-          <!-- <div class="row">
-            <div class="col-sm-6">
-              <marco>
-                <div class="gallery-item">
-                  <img src="img/placita.jpeg" class="img-fluid gallery-img">
-                  <img_text class="centrado">Barrio de Santa Cruz</img_text>
-                </div>
-              </marco>
-            </div>
-          </div> -->
 </template>
 
 

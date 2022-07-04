@@ -40,6 +40,19 @@
 import EventCard from '~/components/EventCardList.vue'
 export default {
   name: 'SummerEventList',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     EventCard,
   },

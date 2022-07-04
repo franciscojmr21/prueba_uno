@@ -19,6 +19,19 @@
 import Card from '~/components/Card.vue'
 export default {
   name: 'ListPage',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     Card,
   },

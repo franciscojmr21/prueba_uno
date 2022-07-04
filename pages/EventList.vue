@@ -39,7 +39,23 @@
 <script>
 import EventCard from '~/components/EventCardList.vue'
 export default {
+
+
+
   name: 'IndexPage',
+  head () {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: "hola",
+          name: "hola",
+          description: "hola"
+        }
+      ]
+    }
+    
+  },
   components: {
     EventCard,
   },
