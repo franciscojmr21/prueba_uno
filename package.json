@@ -1,5 +1,5 @@
 {
-  "name": "Sevilla",
+  "name": "sevilla",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -44,5 +44,13 @@
   "main": ".eslintrc.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscojmr21/sevilla_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/franciscojmr21/sevilla_project/issues"
+  },
+  "homepage": "https://github.com/franciscojmr21/sevilla_project#readme"
 }
