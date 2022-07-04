@@ -13,7 +13,7 @@
                 :eventWeb="eventWeb"
                 :ticketWeb="ticketWeb"
           />
-          <point-of-interest-card
+          <point-of-interest-card v-if="pointsOfInterest!=null"
             :id="pointsOfInterest.id"
             :title="pointsOfInterest.title"
             :photo="pointsOfInterest.photo"
