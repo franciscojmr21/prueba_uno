@@ -2,16 +2,14 @@
 
     <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
     
-            <div class="pointOfInterest-item" > 
+            <div class="pointOfInterest-item" style="max-width: 640px; max-height: 405px;">
               <marco>
-              <img class="img-fluid" :src="photo"  >
+              <img :src="photo" class="card-img-top car-img" style="max-width: 640px; max-height: 405px;">
+              <img_text class="centrado">{{this.title}}</img_text>
             </marco>
             </div>
           </nuxt-link>
-          <!--
-style="max-width: 640px; max-height: 405px;"
-class="card-img-top car-img"
-          -->
+          
 </template>
 
 

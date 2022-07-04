@@ -124,26 +124,41 @@
                     :id=getId(allList,3)
                     :title1=getTitle1(allList,3)
                     :title2=getTitle2(allList,3)
+                    :dir=getDir(allList,3)
+                    :hora=getHora(allList,3)
+                    :location=getLocation(allList,3)
                     />
               <service-card
                     :id=getId(allList,4)
                     :title1=getTitle1(allList,4)
                     :title2=getTitle2(allList,4)
+                    :dir=getDir(allList,4)
+                    :hora=getHora(allList,4)
+                    :location=getLocation(allList,4)
                     />
               <service-card
                     :id=getId(allList,5)
                     :title1=getTitle1(allList,5)
                     :title2=getTitle2(allList,5)
+                    :dir=getDir(allList,5)
+                    :hora=getHora(allList,5)
+                    :location=getLocation(allList,5)
                     />
               <service-card
                     :id=getId(allList,6)
                     :title1=getTitle1(allList,6)
                     :title2=getTitle2(allList,6)
+                    :dir=getDir(allList,6)
+                    :hora=getHora(allList,6)
+                    :location=getLocation(allList,6)
                     />
               <service-card
                     :id=getId(allList,7)
                     :title1=getTitle1(allList,7)
                     :title2=getTitle2(allList,7)
+                    :dir=getDir(allList,7)
+                    :hora=getHora(allList,7)
+                    :location=getLocation(allList,7)
                     />
 
             </div>
@@ -164,19 +179,12 @@
           </div>
         </div>
     </section>
-
-    <section class="itineary_form py-5" id="itineraries">
-      <div class="container" id="itineraries">
-        <!-- section title -->
-        <div class="row my-5">
-          <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-            <h1 class="section-title--special mx-1">Itinerary</h1>
-          </div>
+    <section class="itineary_form py-5" id="itineraries" style="  background: linear-gradient(rgba(241, 99, 64, 0.7), rgba(241, 99, 64, 0.7)), url(https://urbansevilla.es/wp-content/uploads/2019/06/la-giralda-sevilla-airpano.jpg)center/cover fixed no-repeat;">
+      <div class="row my-5">
+        <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+          <h1 class="section-title--special mx-1 border shadow-lg">Itinerary</h1>
         </div>
-        <!-- end of section title -->
-      </div>
-      <section class="itinearies py-2 d-flex align-items-center" id="itinearies">
-        <div class="video-overlay">
+        <section class="itinearies py-2 d-flex align-items-center" id="itinearies">
           <div class="container py-5">
             <div class="row my-3">
               <itinerary-card
@@ -201,9 +209,8 @@
                 />
             </div>
           </div>
+        </section>
         </div>
-      </section>  
-      <!-- end of itinearies section -->
     </section>
 
     <section class="services py-5" id="points_of_interest">
@@ -350,6 +357,15 @@ export default {
     },
     getTicketWeb(list, i){
       return list[i].ticketWeb;
+    },
+    getLocation(list, i){
+      return list[i].location;
+    },
+    getHora(list, i){
+      return list[i].hora;
+    },
+    getDir(list, i){
+      return list[i].dir;
     },
   }
 }

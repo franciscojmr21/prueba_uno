@@ -3,21 +3,20 @@
       <div class="row my-5">
         <div class="col d-flex flex-wrap text-uppercase justify-content-center">
             <h1 class="section-title--special mx-1">Itinerary</h1>
-          </div>
-      </div>
-      <div class="video-overlay">
-        <div class="container py-5">
-          <div class="row my-3">
-            <itinerary-card 
-              v-for="(itinerary, itineraryIndex) of itineraryList"
-              :key="`itinerary-index-${itineraryIndex}`"
-              :id="itinerary.id"
-              :title1="itinerary.title1"
-              :title2="itinerary.title2"
-            />
+        </div>
+          <div class="container py-5">
+            <div class="row my-3">
+              <itinerary-card 
+                v-for="(itinerary, itineraryIndex) of itineraryList"
+                :key="`itinerary-index-${itineraryIndex}`"
+                :id="itinerary.id"
+                :title1="itinerary.title1"
+                :title2="itinerary.title2"
+                style="padding: 20px 20px 20px 20px;"
+              />
+            </div>
           </div>
         </div>
-      </div>
     </section>
 </template>
 
@@ -72,11 +71,7 @@ export default {
   padding: 0.5rem 2rem;
   clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
 }
-
  /* itineary_form */
-.itineary_form{
-  background: var(--mainWhite);
-}
 .itineary_form-item{
   background: var(--mainWhite);
   border-radius: 0.5rem;

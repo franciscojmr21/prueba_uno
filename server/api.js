@@ -36,7 +36,8 @@ async function initializeDatabaseConnection() {
         title1: DataTypes.STRING, 
         title2: DataTypes.STRING, 
         dir: DataTypes.STRING,
-        hora: DataTypes.STRING
+        hora: DataTypes.STRING,
+        location: DataTypes.STRING
     })
     const Itinerary = database.define("itinerary", {
         title1: DataTypes.STRING, 
@@ -214,6 +215,9 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                dir: element.dir,
+                hora: element.hora,
+                location: element.location,
                 id: element.id,
             })
         }
@@ -248,6 +252,9 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                dir: element.dir,
+                hora: element.hora,
+                location: element.location,
                 id: element.id,
             })
         }
@@ -263,6 +270,9 @@ async function runMainApi() {
             filtered.push({
                 title1: element.title1,
                 title2: element.title2,
+                dir: element.dir,
+                hora: element.hora,
+                location: element.location,
                 id: element.id,
             })
         }
@@ -322,6 +332,7 @@ async function runMainApi() {
                 title2: element.title2,
                 dir: element.dir,
                 hora: element.hora,
+                location: element.location,
                 id: element.id,
             })
         }

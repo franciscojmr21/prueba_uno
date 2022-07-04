@@ -1,12 +1,12 @@
 <template>
-  <div class="services">
-    <div class="services-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+  <a class="services" :href="location" target="_blank" rel="noopener noreferrer">
+    <div class="services-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap text-black" >
         <h5 class="font-weight-bold mx-1">{{title1}}</h5>
         <h5 class="mx-1">{{title2}}</h5>
         <h5 class="mx-1">{{dir}}</h5>
         <h5 class="mx-1">{{hora}}</h5>
     </div>
-    </div>
+    </a>
 </template>
 
 
@@ -30,7 +30,11 @@ export default {
       type: String,
       required: true,
     },
-  hora: {
+    hora: {
+      type: String,
+      required: true,
+    },
+    location: {
       type: String,
       required: true,
     },

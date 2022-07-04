@@ -1,28 +1,11 @@
-<!-- <template>
-
-
-  <custom-page :title="title" :image="image" :description="description" />
-
-
-</template> -->
-
 <template>
-  <!DOCTYPE html>
-  <html>
-    <head>
-
-    </head>
-    <body>
-      <section class="itineary_form py-5" id="itineraries" style="background: rgb(216, 214, 214);">
+      <section class="itineary_form py-5" id="itineraries" style="background: linear-gradient(rgba(241, 99, 64, 0.7), rgba(241, 99, 64, 0.7)), url(https://urbansevilla.es/wp-content/uploads/2019/06/la-giralda-sevilla-airpano.jpg)center/cover fixed no-repeat;">
       <div class="container">
-        <!-- section title -->
           <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-            <h1 class="section-title--special mx-1">About Us</h1>
+            <h1 class="section-title--special mx-1 border shadow-lg">About Us</h1>
           </div>
-        <!-- end of section title -->
       </div>
       <section class="itinearies py-2 d-flex align-items-center" id="itinearies">
-        <div class="video-overlay">
           <div class="container py-5">
            <custom-page :title="title" :description="description" /> 
            <p class="text-white" style="text-shadow: black 0.2em 0.2em 0.5em;">
@@ -32,13 +15,8 @@ With a happy and passionate spirit, Seville is a city that stands out not only f
 The information and practical data have been collected in July 2021. If you find any errors or see something that we should change, contact us.
            </p>
           </div>
-        </div>
       </section>  
-      <!-- end of itinearies section -->
     </section>
-    </body>
-    
-  </html>
 </template>
 
 <script>

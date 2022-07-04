@@ -5,7 +5,7 @@
       <a  href="/" class="navbar-brand">
         <img src="https://i.pinimg.com/236x/54/af/2b/54af2b7d1c96a9a659630d5e133b5009.jpg" style="max-width: 70px; max-height: 70px;" alt="logo">
       </a>
-      <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="navbarToggler" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon  navbar-light"></span>
       </button>
       <div class="navbar-collapse collapse" id="myNav">

@@ -11,6 +11,9 @@
       <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 justify-content-around rounded-3 border shadow-lg">
         <a class="col">
           <div class="img-container">
+            <a class="services-link">
+              <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+            </a>
             <a v-if="getId(allList,0)==1" href="https://goo.gl/maps/y9DF8QJwdMJDffm58">
               <img v-if="getId(allList,0)==1" src="@/img/day1.png"  style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
             </a>
@@ -22,9 +25,6 @@
             </a>
             <a v-if="getId(allList,0)==4" href="https://goo.gl/maps/Y7mmi1sCcx4LS5iq8">
               <img v-if="getId(allList,0)==4" src="@/img/day4.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
-            </a>
-            <a class="services-link">
-              <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
             </a>
           </div>
         </a>

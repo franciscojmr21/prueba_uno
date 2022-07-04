@@ -18,7 +18,7 @@ export default async (models) => {
         {
             title1: "Day",
             title2: "3",
-            description: "the most central and busy streets of the city. The tour starts from one of the northern areas of the historical center visiting one of the most contemporary buildings of the city with a very unique architectural style. After that we will visit one of the most conical squares where one of the most important churches of the city is located. Near this square there is a very busy square where the town hall is located. After that we will visit the Archivo de Indias, one of the most emblematic buildings of the city. To finish the tour we will visit the great Maestranza on the river bank so you can enjoy the sunset in it.",
+            description: "The most central and busy streets of the city. The tour starts from one of the northern areas of the historical center visiting one of the most contemporary buildings of the city with a very unique architectural style. After that we will visit one of the most conical squares where one of the most important churches of the city is located. Near this square there is a very busy square where the town hall is located. After that we will visit the Archivo de Indias, one of the most emblematic buildings of the city. To finish the tour we will visit the great Maestranza on the river bank so you can enjoy the sunset in it.",
 
         },
         {
@@ -337,57 +337,66 @@ export default async (models) => {
         {
             title1: "Virgen Macarena",
             title2: "Hospital",
-            dir: " / dir: Calle Pintores 2 / ",
-            hora:"time: 8:00 - 21:00"
+            dir: " / Av. Dr. Fedriani, 3 / ",
+            hora:"time: 24h",
+            location:"https://goo.gl/maps/vgTfa449JnJSjnvy5"
            
         },
         {
             title1: "Virgen del Rocio University",
             title2: "Hospital",
-            dir: " / dir: Calle Antonio Machado 2 / ",
-            hora:"time: 8:00 - 21:30"
+            dir: " / dir: Av. Manuel Siurot, S/n / ",
+            hora:"time: 24h",
+            location:"https://goo.gl/maps/2K6BjdZNojMBinjr9"
         },
         {
             title1: "Maria Eugennia Cruz Roja Sevilla",
             title2: "Hospital",
-            dir: " / dir: Calle Antonio Lucas 3 / ",
-            hora:"time: 8:00 - 22:00"
+            dir: " / dir: Av. la Cruz Roja, 1 / ",
+            hora:"time: 24h",
+            location:"https://goo.gl/maps/cdAaQzf62Wjyv5At7"
         },
         {
             title1: "Reyes CB",
             title2: "Pharmacy",
-            dir: " / dir: Calle Luis Montoto 4 / ",
-            hora:"time: 8:00 - 21:15"
+            dir: " / dir: C. Amador de los Ríos, 31, 33 / ",
+            hora:"time: 24h",
+            location:"https://goo.gl/maps/JDLC7SgWBRRBWdi19"
         },
         {
             title1: "San Pablo 24H",
             title2: "Pharmacy",
-            dir: " / dir: Calle Miguel 3 / ",
-            hora:"time: 8:00 - 19:00"
+            dir: " / dir: C. Jerusalén, 35 / ",
+            hora:"time: 24h",
+            location:"https://goo.gl/maps/xxpgLXfvPEV3Tjaw8"
         },
         {
             title1: "María Auxiliadora",
             title2: "Pharmacy",
-            dir: " / dir: Calle Josan 7 / ",
-            hora:"time: 10:00 - 21:00"
+            dir: " / dir: C. María Auxiliadora, 6 / ",
+            hora:"time: 8:00 - 20:30",
+            location:"https://goo.gl/maps/BzCnysJusMLNe9dN9"
         },
         {
             title1: "Spanish",
             title2: "Bank",
-            dir: " / dir: Calle Francisco Muñoz 4 / ",
-            hora:"time: 8:00 - 11:00"
+            dir: " / dir: Pl. de S. Francisco, 17 / ",
+            hora:"time: 8:30 - 14:00",
+            location:"https://goo.gl/maps/68hQpGCSykqExKEi9"
         },
         {
             title1: "Eurostars Tower",
             title2: "Hotel",
-            dir: " / dir: Calle Vacie 45 / ",
-            hora:"time: 8:00 - 21:40"
+            dir: " / dir: C/ Gonzalo Jimenez de Quesada, 2 / ",
+            hora:"time: 8:00 - 21:40",
+            location:"https://g.page/hotel-eurostars-torre-sevilla?share"
         },
         {
             title1: "Duquesa",
             title2: "Hotel",
-            dir: " / dir: Calle Casillas 14 / ",
-            hora:"time: 8:00 - 23:00"
+            dir: " / dir: Pl. del Duque de la Victoria, 11 / ",
+            hora:"time: 8:00 - 23:00",
+            location:"https://goo.gl/maps/RQ6w5k9ySeRNhrfK8"
         },
 
 
