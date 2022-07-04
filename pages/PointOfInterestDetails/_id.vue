@@ -1,21 +1,22 @@
 <template>
   <div class="container my-5" style="background-color: white;">
-    <div class="row">
-      <div class="col">
+    <div class="col justify-content-around">
+      <div class="row">
         <point-of-interest-card-details
                 :id="id"
                 :title="title"
                 :photo="photo"
                 :description="description"/>
       </div>
-      <div class="col">
-        <div v-if="itinerary!=null" class="col d-flex flex-wrap text-uppercase justify-content-center" style="padding: 20px 20px 20px 20px;">
-          <h1 class="section-title--special mx-1">Itinerary: </h1>
-        </div>
-        <div v-if="itinerary!=null" style="padding: 20px 20px 20px 20px;">
-            <itinerary-card
+      <div class="row justify-content-center elementos 
+                  d-flex 
+                  flex-column 
+                  justify-content-center 
+                  text-center">
+        <div cl v-if="itinerary!=null">
+            <itinerary-card-data
               :id="itinerary.id"
-              :title1="itinerary.title1"
+              :title1="'Itineray:   '+itinerary.title1"
               :title2="itinerary.title2"/>
         </div>
       </div>
@@ -33,13 +34,13 @@
 
 <script>
 import CommonMixin from '~/mixins/common'
-import ItineraryCard from '~/components/ItineraryCard.vue'
+import ItineraryCardData from '~/components/ItineraryCardData.vue'
 import PointOfInterestCardDetails from '~/components/PointOfInterestCardDetails.vue'
 export default {
   name: 'PointOfInterestDetails',
   components: {
     PointOfInterestCardDetails,
-    ItineraryCard
+    ItineraryCardData
   },
   mixins: [CommonMixin],
   async asyncData({ route, $axios }) {

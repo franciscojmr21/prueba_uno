@@ -5,14 +5,14 @@
 
     </head>
     <body>
-      <section class="pointsOfInterest py-5" id="pointsOfInterest">
+      <section class="pointsOfInterest py-5" id="pointsOfInterest" style="background-color: rgb(216, 214, 214);">
         <div class="container">
           <!-- section title -->
           <div class="row mb-5">
             <div class="col d-flex flex-wrap text-uppercase justify-content-center">
               <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
               <!-- <a href="Events.html#setas"> -->
-              <h1 class="section-title--special mx-1">points Of Interest</h1>
+              <h1 class="section-title--special mx-1">&nbsp;points Of Interest</h1>
             <!-- </a> -->
             </div>
           </div>
@@ -51,6 +51,17 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainOrange:rgba(241, 99, 64, 0.7);
+  --transparentOrange:rgba(241, 99, 64, 0.7);
+  --mainWhite:#FFFFFF;
+  --mainGrey:#9c9c9c;
+  --mainBlack:#000000;
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e3b505;
+}
 .section-title--special{
   background: var(--transparentOrange);
   color: var(--mainWhite);
