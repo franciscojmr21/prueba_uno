@@ -53,15 +53,6 @@ async function initializeDatabaseConnection() {
     }
 }
 
-
-const pageContentObject = {
-    about: {
-        title: "Who are us?",
-        description: ``
-    },
-}
-
-
 async function runMainApi() {
     const models = await initializeDatabaseConnection()
     await initialize(models)
