@@ -42,15 +42,15 @@ export default {
 
 
 
-  name: 'IndexPage',
+  name: 'EventList',
   head () {
     return {
       title: this.name,
       meta: [
         {
-          hid: "sev_special_color",
-          name: "Sevilla has a special color",
-          description: "This is the best Sevilla toruist website "
+          hid: "sev_special_color_1",
+          name: "Sevilla Tourist Website Events- Sevilla Events",
+          description: "Sevilla Events Page - This is the page where we talk about all the events happening in Sevilla, also you can search for sevilla summer events and sevilla spring events. This is the best tourist sevilla website, with its events, points of interest, itineraries and services"
         }
       ]
     }

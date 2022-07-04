@@ -37,15 +37,15 @@
 <script>
 import ServiceCard from '~/components/ServiceCard.vue'
 export default {
-  name: 'ServiceList',
+  name: 'HotelsServiceList',
   head () {
     return {
       title: this.name,
       meta: [
         {
-          hid: "sev_special_color",
-          name: "Sevilla has a special color",
-          description: "This is the best Sevilla toruist website "
+          hid: "sev_special_color_9",
+          name: "Sevilla Tourist Website HotelsService- Sevilla Services Sevilla Hotels",
+          description: "Sevilla Hotels Page - This is the page where we talk about what are the hotels in sevilla. This is the best tourist sevilla website, with its events, points of interest, itineraries and services"
         }
       ]
     }

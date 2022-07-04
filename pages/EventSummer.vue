@@ -45,9 +45,9 @@ export default {
       title: this.name,
       meta: [
         {
-           hid: "sev_special_color",
-          name: "Sevilla has a special color",
-          description: "This is the best Sevilla toruist website "
+           hid: "sev_special_color_3",
+          name: "Sevilla Tourist Website SummerEvents- Sevilla SummerEvents",
+          description: "Sevilla Summer Events Page - This is the page where we talk about what are the sevilla summer events. This is the best tourist sevilla website, with its events, points of interest, itineraries and services"
         }
       ]
     }

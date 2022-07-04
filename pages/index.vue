@@ -285,8 +285,8 @@ export default {
       title: this.name,
       meta: [
         {
-          name: "description",
-          hid: "description",
+          name: "sev_special_color_4",
+          hid: "Sevilla Tourist Website Index- Sevilla IndexEvents",
           content: "With a happy and passionate spirit, Seville is a city that stands out not only for its great artistic and architectural importance, but also for having a pulsating history that is still felt at every step through the heart of its old town. Seville is a charming city that moves to the rhythm of flamenco, and as the song says, Seville has a special color. The city is located in the south of the Iberian Peninsula, it is the capital of Andalusia and one of the most populated cities in Spain behind Madrid, Barcelona and Valencia.The capital of Seville extends in a strategic enclave on the banks of the Guadalquivir, a river responsible for its great historical importance due to the fact that it turned the city into a prosperous commercial port that would unite it with the Americas. The Andalusian capital has excellent monuments such as the Torre del Oro, or the Giralda. This webpage has benn written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville. The information and practical data have been collected in July 2022. Written by travelers and for travelers, we offer useful information to travel to Seville and make the most of time and money. With our help you will be able to know the essential monuments of the city, what are the typical dishes and the best areas to sleep, or our Top 10 in Seville."
         }
       ]
