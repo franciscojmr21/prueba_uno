@@ -1,6 +1,6 @@
 <template>
-<div style="padding: 10px;">
-    <div >
+  <div style="padding: 10px;">
+    <div>
       <div class="col d-flex flex-wrap text-uppercase justify-content-center" style="padding: 20px 0px 0px 0px;">
         <h1 class="section-title--special mx-1" >{{this.title}}</h1>
       </div>

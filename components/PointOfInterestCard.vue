@@ -1,15 +1,12 @@
 <template>
-
-    <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
-    
-            <div class="pointOfInterest-item" style="max-width: 640px; max-height: 405px;">
-              <marco>
-              <img :src="photo" class="card-img-top car-img" style="max-width: 640px; max-height: 405px;">
-              <img_text class="centrado">{{this.title}}</img_text>
-            </marco>
-            </div>
-          </nuxt-link>
-          
+  <nuxt-link :to="`/PointOfInterestDetails/${id}`" class="col-sm-6" style="padding: 10px;">
+    <div class="pointOfInterest-item" style="max-width: 640px; max-height: 405px;">
+      <marco>
+        <img :src="photo" class="card-img-top car-img" style="max-width: 640px; max-height: 405px;">
+        <img_text class="centrado">{{this.title}}</img_text>
+      </marco>
+    </div>
+  </nuxt-link>
 </template>
 
 
@@ -20,17 +17,17 @@ export default {
     props: {
       id: {
       type: Number,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    }, 
-    photo: {
-      type: String,
-      required: true,
-    }, 
-        }
+        required: true,
+      },
+      title: {
+        type: String,
+        required: true,
+      }, 
+      photo: {
+        type: String,
+        required: true,
+      }, 
+    }
 }
 </script>
 
@@ -47,7 +44,7 @@ export default {
   --mainGrey:rgb(216, 214, 214);
   --mainYellow:#e3b505;
 }
-   /* point of interest  */
+  
 .pointOfInterest-item{
   background: var(--mainYellow);
   position: relative;
@@ -78,8 +75,6 @@ opacity: 0.5;
 .pointOfInterest-item:hover:after{
   transform: scale(1);
 }
-
-/*TEX OF POINT OF INTEREST*/
 
 .centrado{
   color: white;

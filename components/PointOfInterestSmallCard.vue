@@ -1,44 +1,41 @@
 <template>
-
-     <nuxt-link :to="`/PointOfInterestDetails/${id}`" v-if="title!=null" class="col-sm-6" style="padding: 10px;">
-    
-            <div class="pointOfInterest-item" style="max-width: 357px; max-height: 240px;">
-              <marco>
-              <img :src="photo" class="card-img-top car-img" style="max-width: 357px; max-height: 240px;">
-              <img_text class="centrado">{{this.title}}</img_text>
-            </marco>
-            </div>
-          </nuxt-link>
+  <nuxt-link :to="`/PointOfInterestDetails/${id}`" v-if="title!=null" class="col-sm-6" style="padding: 10px;">
+    <div class="pointOfInterest-item" style="max-width: 357px; max-height: 240px;">
+      <marco>
+        <img :src="photo" class="card-img-top car-img" style="max-width: 357px; max-height: 240px;">
+        <img_text class="centrado">{{this.title}}</img_text>
+      </marco>
+    </div>
+  </nuxt-link>
 </template>
 
 
 <script >
-
 export default {
   name:"PointOfInterestSmallCard",
     props: {
       id: {
       type: Number,
       required: true,
+      },
+      title: {
+        type: String,
+        required: true,
+      }, 
+      photo: {
+        type: String,
+        required: true,
+      }, 
     },
-    title: {
-      type: String,
-      required: true,
-    }, 
-    photo: {
-      type: String,
-      required: true,
-    }, 
-        },
-        methods:{
-    getWidth(photo){
-      console.log("Ancho: "+photo.width)
-      return photo.width;
-    },
-    getHeight(photo){
-      console.log("Alto: "+photo.height)
-      return photo.height;
-    },
+    methods:{
+      getWidth(photo){
+        console.log("Ancho: "+photo.width)
+        return photo.width;
+      },
+      getHeight(photo){
+        console.log("Alto: "+photo.height)
+        return photo.height;
+      },
     }
 }
 </script>
@@ -56,7 +53,7 @@ export default {
   --mainGrey:rgb(216, 214, 214);
   --mainYellow:#e3b505;
 }
-   /* point of interest  */
+
 .pointOfInterest-img{
   transition: all 1s ease-in-out;
 }
@@ -82,8 +79,6 @@ opacity: 0.5;
 .pointOfInterest-item:hover:after{
   transform: scale(1);
 }
-
-/*TEX OF POINT OF INTEREST*/
 
 .centrado{
   color: white;

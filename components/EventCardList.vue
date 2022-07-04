@@ -1,38 +1,29 @@
 <template>
-
-    <!-- single Event -->
-          <div  class="col-10 mx-auto my-3 col-md-6 col-lg-4" style="max-width: 380px;">
-            <div class="card event-card" >
-              <a :href="eventWeb" target="_blank" rel="noopener noreferrer">
-              <img :src="photo" class="card-img-top car-img" alt="" style="height: 400px;">
-              </a>
-              <!-- card body -->
-              <div class="card-body">
-                <div class="event-info d-flex justify-content-between">
-                  <!-- first flex child -->
-                  <div class="event-text text-uppercase">
-                    <h6 class="font-weight-bold">{{title}}</h6>
-                    <i style="color: grey;"><span></span>{{date}}</i> 
-                  </div>
-                  <!-- second flex child -->
-                  <a :href="ticketWeb" target="_blank" rel="noopener noreferrer">
-
-                  <h5 class="event-value align-self-center py-2 px-3">
-                    <span class="event-price">{{prize}}</span>
-                  </h5>
-                  
-                </a>
-                </div>
-              </div>
-              <!-- end of card -->
-              <div class="card-footer text-capitalize d-flex justify-content-center" >
-                <nuxt-link :to="`/EventDetails/${id}`">
-                  <div class="btn btn-primary btn-orange">See Details</div>
-                </nuxt-link>
-              </div>
-            </div>
+  <div  class="col-10 mx-auto my-3 col-md-6 col-lg-4" style="max-width: 380px;">
+    <div class="card event-card" >
+      <a :href="eventWeb" target="_blank" rel="noopener noreferrer">
+        <img :src="photo" class="card-img-top car-img" alt="" style="height: 400px;">
+      </a>
+      <div class="card-body">
+        <div class="event-info d-flex justify-content-between">
+          <div class="event-text text-uppercase">
+            <h6 class="font-weight-bold">{{title}}</h6>
+            <i style="color: grey;"><span></span>{{date}}</i> 
           </div>
-          <!--end of single Event -->
+          <a :href="ticketWeb" target="_blank" rel="noopener noreferrer">
+            <h5 class="event-value align-self-center py-2 px-3">
+              <span class="event-price">{{prize}}</span>
+            </h5>
+          </a>
+        </div>
+      </div>
+      <div class="card-footer text-capitalize d-flex justify-content-center" >
+        <nuxt-link :to="`/EventDetails/${id}`">
+          <div class="btn btn-primary btn-orange">See Details</div>
+        </nuxt-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script >
