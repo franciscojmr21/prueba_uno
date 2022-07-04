@@ -270,6 +270,7 @@ import EventCardList from '~/components/EventCardList.vue'
 import ItineraryCard from '~/components/ItineraryCard.vue'
 import PointOfInterestCard from '~/components/PointOfInterestCard.vue'
 import PointOfInterestSmallCard from '~/components/PointOfInterestSmallCard.vue'
+
 export default {
   name: 'IndexPage',
   components: {
@@ -284,9 +285,9 @@ export default {
       title: this.name,
       meta: [
         {
-          hid: "hola",
-          name: "hola",
-          description: "hola"
+          hid: "sev_special_color",
+          name: "Sevilla has a special color",
+          description: "This is the best Sevilla toruist website "
         }
       ]
     }

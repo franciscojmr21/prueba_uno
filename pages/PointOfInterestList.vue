@@ -41,9 +41,9 @@ export default {
       title: this.name,
       meta: [
         {
-          hid: "hola",
-          name: "hola",
-          description: "hola"
+          hid: "sev_special_color",
+          name: "Sevilla has a special color",
+          description: "This is the best Sevilla toruist website "
         }
       ]
     }

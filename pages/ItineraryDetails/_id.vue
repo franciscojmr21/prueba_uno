@@ -9,19 +9,24 @@
               />
       </div>
       <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 justify-content-around rounded-3 border shadow-lg">
-        <a class="col" href="">
-          <a v-if="getId(allList,0)==1" href="https://goo.gl/maps/y9DF8QJwdMJDffm58">
-            <img v-if="getId(allList,0)==1" src="@/img/day1.png"  style="max-width: 600px; max-height: 300px; padding: auto;"/>
-          </a>
-          <a v-if="getId(allList,0)==2" href="https://goo.gl/maps/PZ36fsRovmfJ94rP7">
-            <img v-if="getId(allList,0)==2" src="@/img/day2.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;"/>
-          </a>
-          <a v-if="getId(allList,0)==3" href="https://goo.gl/maps/VZkMfDSNXRAj1WVf8">
-            <img v-if="getId(allList,0)==3" src="@/img/day3.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;"/>
-          </a>
-          <a v-if="getId(allList,0)==4" href="https://goo.gl/maps/Y7mmi1sCcx4LS5iq8">
-            <img v-if="getId(allList,0)==4" src="@/img/day4.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;"/>
-          </a>
+        <a class="col">
+          <div class="img-container">
+            <a v-if="getId(allList,0)==1" href="https://goo.gl/maps/y9DF8QJwdMJDffm58">
+              <img v-if="getId(allList,0)==1" src="@/img/day1.png"  style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+            </a>
+            <a v-if="getId(allList,0)==2" href="https://goo.gl/maps/PZ36fsRovmfJ94rP7">
+              <img v-if="getId(allList,0)==2" src="@/img/day2.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+            </a>
+            <a v-if="getId(allList,0)==3" href="https://goo.gl/maps/VZkMfDSNXRAj1WVf8">
+              <img v-if="getId(allList,0)==3" src="@/img/day3.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+            </a>
+            <a v-if="getId(allList,0)==4" href="https://goo.gl/maps/Y7mmi1sCcx4LS5iq8">
+              <img v-if="getId(allList,0)==4" src="@/img/day4.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+            </a>
+            <a class="services-link">
+              <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+            </a>
+          </div>
         </a>
         <div class="col">
           <h6 style="text-shadow: black 0.2em 0.2em 0.5em; padding: 20px 20px 20px 20px;">{{getDescription(allList,0)}}</h6> 
@@ -124,5 +129,42 @@ export default {
   color: var(--mainWhite);
 }
 
+/* Services */
+.services{
+  background: var(--mainGrey);
+}
+.services-item{
+  background: var(--mainWhite);
+  border-radius: 0.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.services-item:hover{
+  opacity: 1;
+  transform: scale(1.05);
+}
+.img-container{
+  background: var(--mainBlue);
+  position: relative;
+  overflow: hidden;
+}
+.services-link{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%,-50%);
+  color: var(--mainBlack);
+  opacity: 0;
+  transition:all 1s ease-in-out;
+}
+.services-link:hover{
+  color: var(--mainWhite);
+}
+
+.img-container:hover .services-link{
+  opacity: 1;
+}
 
 </style>
