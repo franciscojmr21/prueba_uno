@@ -1,19 +1,10 @@
 <template>
-  <!DOCTYPE html>
-  <html>
-    <head>
-
-    </head>
     <body>
       <section class="pointsOfInterest py-5" id="pointsOfInterest" style="background-color: rgb(216, 214, 214);">
         <div class="container">
-          <!-- section title -->
           <div class="row mb-5">
             <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-              <!-- <h1 class="font-weight-bold align-self-center mx-1">most important</h1> -->
-              <!-- <a href="Events.html#setas"> -->
               <h1 class="section-title--special mx-1">&nbsp;points Of Interest</h1>
-            <!-- </a> -->
             </div>
           </div>
           <div class="row">
@@ -28,8 +19,6 @@
         </div>
       </section>
     </body>
-    
-  </html>
 </template>
 
 <script>
