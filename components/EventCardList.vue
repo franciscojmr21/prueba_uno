@@ -80,7 +80,7 @@ export default {
   --mainGrey:rgb(216, 214, 214);
   --mainYellow:#e3b505;
 }
-    /* Events */
+/* Events */
 .event{
   background: var(--mainGrey);
 }

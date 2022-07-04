@@ -61,11 +61,6 @@ export default {
       title: this.title
     }
   },
-  mounted(){
-    const date = new Date()
-    // Example on hwo to use mixinx
-    console.log(this.formatMyDate(date.toLocaleDateString()))
-  },
   methods: {
     backToList() {
       this.$router.push('/EventList')

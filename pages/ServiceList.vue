@@ -7,16 +7,16 @@
         </div>
       </div>
       <div class="row">
-          <service-card 
-            v-for="(service, serviceIndex) of serviceList"
-            :key="`service-index-${serviceIndex}`"
-            :id="service.id"
-            :title1="service.title1"
-            :title2="service.title2"
-            :dir = "service.dir"
-            :hora = "service.hora"
-            :location = "service.location"
-          />
+        <service-card 
+          v-for="(service, serviceIndex) of serviceList"
+          :key="`service-index-${serviceIndex}`"
+          :id="service.id"
+          :title1="service.title1"
+          :title2="service.title2"
+          :dir = "service.dir"
+          :hora = "service.hora"
+          :location = "service.location"
+        />
       </div>
     </div>
   </section>
@@ -42,9 +42,7 @@ export default {
   components: {
     ServiceCard,
   },
-  // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
-    // const { data } = await $axios.get('http://localhost:3000/api/cats')
     const { data } = await $axios.get('/api/services')
     return {
       serviceList: data,
@@ -54,7 +52,6 @@ export default {
 </script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 :root{

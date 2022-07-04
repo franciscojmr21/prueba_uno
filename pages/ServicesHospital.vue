@@ -7,16 +7,16 @@
         </div>
       </div>
       <div class="row">
-          <service-card 
-            v-for="(service, serviceIndex) of serviceList"
-            :key="`service-index-${serviceIndex}`"
-            :id="service.id"
-            :title1="service.title1"
-            :title2="service.title2"
-            :dir = "service.dir"
-            :hora = "service.hora"
-            :location = "service.location"
-          />
+        <service-card 
+          v-for="(service, serviceIndex) of serviceList"
+          :key="`service-index-${serviceIndex}`"
+          :id="service.id"
+          :title1="service.title1"
+          :title2="service.title2"
+          :dir = "service.dir"
+          :hora = "service.hora"
+          :location = "service.location"
+        />
       </div>
     </div>
   </section>
@@ -42,9 +42,7 @@ export default {
   components: {
     ServiceCard,
   },
-  // Note: This happens on backend (server) side
   async asyncData({ $axios }) {
-    // const { data } = await $axios.get('http://localhost:3000/api/cats')
     const { data } = await $axios.get('/api/hospital')
     return {
       serviceList: data,
@@ -54,6 +52,17 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainOrange:rgba(241, 99, 64, 0.7);
+  --transparentOrange:rgba(241, 99, 64, 0.7);
+  --mainWhite:#FFFFFF;
+  --mainGrey:#9c9c9c;
+  --mainBlack:#000000;
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e3b505;
+}
 .section-title--special{
   background: var(--transparentOrange);
   color: var(--mainWhite);

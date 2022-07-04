@@ -27,16 +27,6 @@ export default {
         required: true,
       }, 
     },
-    methods:{
-      getWidth(photo){
-        console.log("Ancho: "+photo.width)
-        return photo.width;
-      },
-      getHeight(photo){
-        console.log("Alto: "+photo.height)
-        return photo.height;
-      },
-    }
 }
 </script>
 

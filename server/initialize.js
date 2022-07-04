@@ -3,7 +3,6 @@
 export default async (models) => {
 
     
-
     const itineraryList = [ 
         {
             title1: "Day",

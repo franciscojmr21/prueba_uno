@@ -86,8 +86,22 @@ opacity: 0.5;
   transform: translate(-50%, -50%);
 }
 
-img_text{
+.img_text{
   visibility: hidden;
 }
+
+
+.show_more-btn{
+  text-transorm: uppercase;
+  color: var(--mainWhite);
+  border-color: var(--mainBlack);
+  background-color: var(--transparentOrange);
+  text-shadow: black 0.2em 0.2em 0.5em;
+}
+.show_more-btn:hover{
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
+
 
 </style>

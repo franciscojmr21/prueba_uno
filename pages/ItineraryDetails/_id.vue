@@ -11,20 +11,29 @@
       <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 justify-content-around rounded-3 border shadow-lg">
         <a class="col">
           <div class="img-container">
-            <a class="services-link">
-              <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
-            </a>
             <a v-if="getId(allList,0)==1" href="https://goo.gl/maps/y9DF8QJwdMJDffm58">
               <img v-if="getId(allList,0)==1" src="@/img/day1.png"  style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+              <a class="services-link">
+                <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+              </a>
             </a>
             <a v-if="getId(allList,0)==2" href="https://goo.gl/maps/PZ36fsRovmfJ94rP7">
               <img v-if="getId(allList,0)==2" src="@/img/day2.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+              <a class="services-link">
+                <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+              </a>
             </a>
             <a v-if="getId(allList,0)==3" href="https://goo.gl/maps/VZkMfDSNXRAj1WVf8">
               <img v-if="getId(allList,0)==3" src="@/img/day3.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+              <a class="services-link">
+                <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+              </a>
             </a>
             <a v-if="getId(allList,0)==4" href="https://goo.gl/maps/Y7mmi1sCcx4LS5iq8">
               <img v-if="getId(allList,0)==4" src="@/img/day4.png" alt="" style="max-width: 600px; max-height: 300px; padding: auto;" class="img-fluid services-photo"/>
+              <a class="services-link">
+                <img style="max-width: 400px; max-height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png"/>
+              </a>
             </a>
           </div>
         </a>
@@ -70,33 +79,21 @@ export default {
   }, 
   methods: {
      getId(list, i){
-      const id = list[i].id;
-      console.log("id: "+id)
       return list[i].id;
     },
      getDescription(list, i){
-      const id = list[i].description;
-      console.log("desc: "+id)
       return list[i].description;
     },
     getTitle(list, i){
-      const id = list[i].title;
-      console.log("title: "+id)
       return list[i].title;
     },
     getTitle1(list, i){
-      const id = list[i].title1;
-      console.log("title1: "+id)
       return list[i].title1;
     },
     getTitle2(list, i){
-      const id = list[i].title2;
-      console.log("title2: "+id)
       return list[i].title2;
     },
     getPhoto(list, i){
-      const id = list[i].photo;
-      console.log("photo: "+id)
       return list[i].photo;
     },
   },
@@ -117,17 +114,51 @@ export default {
   --mainYellow:#e3b505;
 }
 
-.show_more-btn{
-  text-transorm: uppercase;
-  color: var(--mainWhite);
-  border-color: var(--mainBlack);
-  background-color: var(--transparentOrange);
+.pointOfInterest-item{
+  background: var(--mainYellow);
+  position: relative;
+  cursor: pointer;
+}
+.pointOfInterest-img{
+  transition: all 1s ease-in-out;
+}
+.pointOfInterest-item:hover .pointOfInterest-img{
+opacity: 0.5;
+}
+
+.pointOfInterest-item:hover .centrado{
+  visibility: visible;
+  }
+.pointOfInterest-item::after{
+  content: "";
+  position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ outline: 0.5rem solid var(--mainWhite);
+ outline-offset: -2rem;
+ transition: all 1s ease-in-out;
+ transform: scale(0);
+}
+.pointOfInterest-item:hover:after{
+  transform: scale(1);
+}
+
+.centrado{
+  color: white;
   text-shadow: black 0.2em 0.2em 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
-.show_more-btn:hover{
-  background: var(--mainBlack);
-  color: var(--mainWhite);
+
+img_text{
+  visibility: hidden;
 }
+
 
 /* Services */
 .services{
